@@ -1,134 +1,43 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:http/http.dart';
+import 'package:movies_app/actions/get_movies.dart';
+import 'package:movies_app/data/movie_api.dart';
+import 'package:movies_app/epics/app_epic.dart';
+import 'package:movies_app/models/app_state.dart';
+import 'package:movies_app/presentation/home_page.dart';
+import 'package:movies_app/reducer/reducer.dart';
+import 'package:redux/redux.dart';
+import 'package:redux_epics/redux_epics.dart';
 
 void main() {
-  runApp(const MovieApp());
+  final Client client = Client();
+  final MovieApi movieApi = MovieApi(client);
+  final AppEpic epic = AppEpic(movieApi);
+
+  final Store<AppState> store = Store<AppState>(
+    reducer,
+    initialState: const AppState(),
+    middleware: <Middleware<AppState>>[
+      EpicMiddleware<AppState>(epic.getEpics()),
+    ],
+  )..dispatch(GetMovies());
+
+  runApp(MoviesApp(store: store));
 }
 
-class MovieApp extends StatelessWidget {
-  const MovieApp({Key? key}) : super(key: key);
+class MoviesApp extends StatelessWidget {
+  const MoviesApp({Key? key, required this.store}) : super(key: key);
+
+  final Store<AppState> store;
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  final List<Movie> _movies = <Movie>[];
-  bool _isLoading = true;
-  int _pageNumber = 1;
-
-  @override
-  void initState() {
-    super.initState();
-    _getMovies();
-  }
-
-  Future<void> _getMovies() async {
-    setState(() => _isLoading = true);
-
-    final Response response = await get(
-      Uri.parse(
-        'https://yts.mx/api/v2/list_movies.json?quality=3D&page=$_pageNumber',
+    return StoreProvider<AppState>(
+      store: store,
+      child: const MaterialApp(
+        home: HomePage(),
       ),
     );
-
-    final Map<String, dynamic> result = jsonDecode(response.body) as Map<String, dynamic>;
-
-    final Map<String, dynamic> data = result['data'] as Map<String, dynamic>;
-    final List<dynamic> movies = data['movies'] as List<dynamic>;
-
-    final List<Movie> list = <Movie>[];
-    for (int i = 0; i < movies.length; i++) {
-      final Map<String, dynamic> item = movies[i] as Map<String, dynamic>;
-      list.add(Movie.fromJson(item));
-    }
-
-    setState(() {
-      _movies.addAll(list);
-      _isLoading = false;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('Movies $_pageNumber')),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.add),
-            onPressed: () {
-              _pageNumber++;
-              _getMovies();
-            },
-          ),
-        ],
-      ),
-      body: Builder(
-        builder: (BuildContext context) {
-          if (_isLoading && _movies.isEmpty) {
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          return ListView.builder(
-            itemCount: _movies.length,
-            itemBuilder: (BuildContext context, int index) {
-              final Movie movie = _movies[index];
-
-              return Column(
-                children: <Widget>[
-                  Image.network(movie.poster),
-                  Text(movie.title),
-                  Text('${movie.year}'),
-                  Text(movie.genres.join(', ')),
-                  Text('${movie.rating}'),
-                ],
-              );
-            },
-          );
-        },
-      ),
-    );
-  }
-}
-
-class Movie {
-  Movie({
-    required this.title,
-    required this.year,
-    required this.rating,
-    required this.genres,
-    required this.poster,
-  });
-
-  Movie.fromJson(Map<String, dynamic> item)
-      : title = item['title'] as String,
-        year = item['year'] as int,
-        rating = (item['rating'] as num).toDouble(),
-        genres = List<String>.from(item['genres'] as List<dynamic>),
-        poster = item['medium_cover_image'] as String;
-
-  final String title;
-  final int year;
-  final double rating;
-  final List<String> genres;
-  final String poster;
-
-  @override
-  String toString() {
-    return 'Movie{title: $title, year: $year, rating: $rating, genres: $genres, poster: $poster}';
   }
 }
