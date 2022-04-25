@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875319082487",
+    "project_id": "andruh-flutter-gad",
+    "storage_bucket": "andruh-flutter-gad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875319082487:android:7a57b7b3e33609181102f2",
+        "android_client_info": {
+          "package_name": "com.example.movies_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875319082487-n3p6p60u6e74s5hselva8rloh9eukmie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS6U6TM3Tef113p_D0ZqSZnKq7Fg6H6wM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875319082487-n3p6p60u6e74s5hselva8rloh9eukmie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
