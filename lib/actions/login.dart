@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movies_app/actions/index.dart';
-import 'package:movies_app/models/app_user.dart';
-
-part 'login.freezed.dart';
+part of 'index.dart';
 
 @freezed
 class Login with _$Login implements AppAction {
@@ -12,6 +8,7 @@ class Login with _$Login implements AppAction {
     required ActionResult onResult,
   }) = LoginStart;
 
+  @Implements<UserAction>()
   const factory Login.successful(AppUser user) = LoginSuccessful;
 
   @Implements<ErrorAction>()

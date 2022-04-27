@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:http/http.dart';
-
-import 'package:movies_app/models/movie.dart';
+import 'package:movies_app/models/index.dart';
 
 class MovieApi {
   const MovieApi(this._client);

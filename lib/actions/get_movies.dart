@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movies_app/actions/index.dart';
-import 'package:movies_app/models/movie.dart';
-
-part 'get_movies.freezed.dart';
+part of 'index.dart';
 
 @freezed
 class GetMovies with _$GetMovies implements AppAction {

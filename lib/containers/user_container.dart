@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:movies_app/models/app_state.dart';
-import 'package:movies_app/models/app_user.dart';
+import 'package:movies_app/models/index.dart';
 import 'package:redux/redux.dart';
 
 class UserContainer extends StatelessWidget {

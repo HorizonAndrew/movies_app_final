@@ -1,8 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movies_app/actions/index.dart';
-import 'package:movies_app/models/app_user.dart';
-
-part 'create_user.freezed.dart';
+part of 'index.dart';
 
 @freezed
 class CreateUser with _$CreateUser implements AppAction {
@@ -13,6 +9,7 @@ class CreateUser with _$CreateUser implements AppAction {
     required ActionResult onResult,
   }) = CreateUserStart;
 
+  @Implements<UserAction>()
   const factory CreateUser.successful(AppUser user) = CreateUserSuccessful;
 
   @Implements<ErrorAction>()
