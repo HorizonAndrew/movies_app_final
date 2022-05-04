@@ -17,7 +17,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-
     StoreProvider.of<AppState>(context, listen: false).dispatch(GetMovies(_onResult));
   }
 

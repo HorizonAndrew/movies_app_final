@@ -52,19 +52,19 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
       movies: movies == freezed
           ? _value.movies
           : movies // ignore: cast_nullable_to_non_nullable
-              as List<Movie>,
+      as List<Movie>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
+      as bool,
       pageNumber: pageNumber == freezed
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as AppUser?,
+      as AppUser?,
     ));
   }
 
@@ -109,25 +109,24 @@ class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> impleme
       movies: movies == freezed
           ? _value.movies
           : movies // ignore: cast_nullable_to_non_nullable
-              as List<Movie>,
+      as List<Movie>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
+      as bool,
       pageNumber: pageNumber == freezed
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
-              as AppUser?,
+      as AppUser?,
     ));
   }
 }
 
 /// @nodoc
-
 class _$AppState$ implements AppState$ {
   const _$AppState$({final List<Movie> movies = const <Movie>[], this.isLoading = true, this.pageNumber = 1, this.user})
       : _movies = movies;
@@ -180,7 +179,7 @@ class _$AppState$ implements AppState$ {
 
 abstract class AppState$ implements AppState {
   const factory AppState$({final List<Movie> movies, final bool isLoading, final int pageNumber, final AppUser? user}) =
-      _$AppState$;
+  _$AppState$;
 
   @override
   List<Movie> get movies => throw _privateConstructorUsedError;
@@ -236,19 +235,19 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
       uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       favoriteMovies: favoriteMovies == freezed
           ? _value.favoriteMovies
           : favoriteMovies // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+      as List<int>,
     ));
   }
 }
@@ -278,19 +277,19 @@ class _$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res> implement
       uid: uid == freezed
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       favoriteMovies: favoriteMovies == freezed
           ? _value.favoriteMovies
           : favoriteMovies // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+      as List<int>,
     ));
   }
 }
@@ -356,9 +355,9 @@ class _$AppUser$ implements AppUser$ {
 abstract class AppUser$ implements AppUser {
   const factory AppUser$(
       {required final String uid,
-      required final String email,
-      required final String username,
-      final List<int> favoriteMovies}) = _$AppUser$;
+        required final String email,
+        required final String username,
+        final List<int> favoriteMovies}) = _$AppUser$;
 
   factory AppUser$.fromJson(Map<String, dynamic> json) = _$AppUser$.fromJson;
 
@@ -399,11 +398,11 @@ abstract class $MovieCopyWith<$Res> {
   factory $MovieCopyWith(Movie value, $Res Function(Movie) then) = _$MovieCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      String title,
-      int year,
-      double rating,
-      List<String> genres,
-      @JsonKey(name: 'medium_cover_image') String poster});
+        String title,
+        int year,
+        double rating,
+        List<String> genres,
+        @JsonKey(name: 'medium_cover_image') String poster});
 }
 
 /// @nodoc
@@ -427,27 +426,27 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       year: year == freezed
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       rating: rating == freezed
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double,
+      as double,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      as List<String>,
       poster: poster == freezed
           ? _value.poster
           : poster // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
     ));
   }
 }
@@ -458,11 +457,11 @@ abstract class $Movie$CopyWith<$Res> implements $MovieCopyWith<$Res> {
   @override
   $Res call(
       {int id,
-      String title,
-      int year,
-      double rating,
-      List<String> genres,
-      @JsonKey(name: 'medium_cover_image') String poster});
+        String title,
+        int year,
+        double rating,
+        List<String> genres,
+        @JsonKey(name: 'medium_cover_image') String poster});
 }
 
 /// @nodoc
@@ -485,27 +484,27 @@ class _$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res> implements $M
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
       year: year == freezed
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as int,
+      as int,
       rating: rating == freezed
           ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
-              as double,
+      as double,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+      as List<String>,
       poster: poster == freezed
           ? _value.poster
           : poster // ignore: cast_nullable_to_non_nullable
-              as String,
+      as String,
     ));
   }
 }
@@ -515,11 +514,11 @@ class _$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res> implements $M
 class _$Movie$ implements Movie$ {
   const _$Movie$(
       {required this.id,
-      required this.title,
-      required this.year,
-      required this.rating,
-      required final List<String> genres,
-      @JsonKey(name: 'medium_cover_image') required this.poster})
+        required this.title,
+        required this.year,
+        required this.rating,
+        required final List<String> genres,
+        @JsonKey(name: 'medium_cover_image') required this.poster})
       : _genres = genres;
 
   factory _$Movie$.fromJson(Map<String, dynamic> json) => _$$Movie$FromJson(json);
@@ -585,11 +584,11 @@ class _$Movie$ implements Movie$ {
 abstract class Movie$ implements Movie {
   const factory Movie$(
       {required final int id,
-      required final String title,
-      required final int year,
-      required final double rating,
-      required final List<String> genres,
-      @JsonKey(name: 'medium_cover_image') required final String poster}) = _$Movie$;
+        required final String title,
+        required final int year,
+        required final double rating,
+        required final List<String> genres,
+        @JsonKey(name: 'medium_cover_image') required final String poster}) = _$Movie$;
 
   factory Movie$.fromJson(Map<String, dynamic> json) = _$Movie$.fromJson;
 

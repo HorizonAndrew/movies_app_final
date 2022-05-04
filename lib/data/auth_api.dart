@@ -49,6 +49,10 @@ class AuthApi {
     return AppUser(uid: credentials.user!.uid, email: email, username: username);
   }
 
+  Future<void> signout() async {
+
+  }
+
   Future<void> updateFavorites(int id, {required bool add}) async {
     final List<int> ids = _getCurrentFavorites();
 
@@ -57,8 +61,6 @@ class AuthApi {
     } else {
       ids.remove(id);
     }
-
-    ids.add(id);
 
     await _preferences.setString(_kFavoriteMoviesKey, jsonEncode(ids));
   }
