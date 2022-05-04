@@ -18,27 +18,21 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$CreateUser {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -70,9 +64,7 @@ mixin _$CreateUser {
 
 /// @nodoc
 abstract class $CreateUserCopyWith<$Res> {
-  factory $CreateUserCopyWith(
-          CreateUser value, $Res Function(CreateUser) then) =
-      _$CreateUserCopyWithImpl<$Res>;
+  factory $CreateUserCopyWith(CreateUser value, $Res Function(CreateUser) then) = _$CreateUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -86,18 +78,15 @@ class _$CreateUserCopyWithImpl<$Res> implements $CreateUserCopyWith<$Res> {
 
 /// @nodoc
 abstract class $CreateUserStartCopyWith<$Res> {
-  factory $CreateUserStartCopyWith(
-          CreateUserStart value, $Res Function(CreateUserStart) then) =
+  factory $CreateUserStartCopyWith(CreateUserStart value, $Res Function(CreateUserStart) then) =
       _$CreateUserStartCopyWithImpl<$Res>;
-  $Res call(
-      {String email, String password, String username, ActionResult onResult});
+  $Res call({String email, String password, String username, ActionResult onResult});
 }
 
 /// @nodoc
 class _$CreateUserStartCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
     implements $CreateUserStartCopyWith<$Res> {
-  _$CreateUserStartCopyWithImpl(
-      CreateUserStart _value, $Res Function(CreateUserStart) _then)
+  _$CreateUserStartCopyWithImpl(CreateUserStart _value, $Res Function(CreateUserStart) _then)
       : super(_value, (v) => _then(v as CreateUserStart));
 
   @override
@@ -135,10 +124,7 @@ class _$CreateUserStartCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
 
 class _$CreateUserStart implements CreateUserStart {
   const _$CreateUserStart(
-      {required this.email,
-      required this.password,
-      required this.username,
-      required this.onResult});
+      {required this.email, required this.password, required this.username, required this.onResult});
 
   @override
   final String email;
@@ -162,17 +148,12 @@ class _$CreateUserStart implements CreateUserStart {
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.username, username) &&
-            (identical(other.onResult, onResult) ||
-                other.onResult == onResult));
+            (identical(other.onResult, onResult) || other.onResult == onResult));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password),
-      const DeepCollectionEquality().hash(username),
-      onResult);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(password), const DeepCollectionEquality().hash(username), onResult);
 
   @JsonKey(ignore: true)
   @override
@@ -182,9 +163,7 @@ class _$CreateUserStart implements CreateUserStart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -194,9 +173,7 @@ class _$CreateUserStart implements CreateUserStart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -206,9 +183,7 @@ class _$CreateUserStart implements CreateUserStart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -266,14 +241,12 @@ abstract class CreateUserStart implements CreateUser {
   String get username => throw _privateConstructorUsedError;
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserStartCopyWith<CreateUserStart> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateUserStartCopyWith<CreateUserStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateUserSuccessfulCopyWith<$Res> {
-  factory $CreateUserSuccessfulCopyWith(CreateUserSuccessful value,
-          $Res Function(CreateUserSuccessful) then) =
+  factory $CreateUserSuccessfulCopyWith(CreateUserSuccessful value, $Res Function(CreateUserSuccessful) then) =
       _$CreateUserSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser user});
 
@@ -281,11 +254,9 @@ abstract class $CreateUserSuccessfulCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreateUserSuccessfulCopyWithImpl<$Res>
-    extends _$CreateUserCopyWithImpl<$Res>
+class _$CreateUserSuccessfulCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
     implements $CreateUserSuccessfulCopyWith<$Res> {
-  _$CreateUserSuccessfulCopyWithImpl(
-      CreateUserSuccessful _value, $Res Function(CreateUserSuccessful) _then)
+  _$CreateUserSuccessfulCopyWithImpl(CreateUserSuccessful _value, $Res Function(CreateUserSuccessful) _then)
       : super(_value, (v) => _then(v as CreateUserSuccessful));
 
   @override
@@ -333,21 +304,17 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
   $CreateUserSuccessfulCopyWith<CreateUserSuccessful> get copyWith =>
-      _$CreateUserSuccessfulCopyWithImpl<CreateUserSuccessful>(
-          this, _$identity);
+      _$CreateUserSuccessfulCopyWithImpl<CreateUserSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -357,9 +324,7 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -369,9 +334,7 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -418,19 +381,16 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
 }
 
 abstract class CreateUserSuccessful implements CreateUser, UserAction {
-  const factory CreateUserSuccessful(final AppUser user) =
-      _$CreateUserSuccessful;
+  const factory CreateUserSuccessful(final AppUser user) = _$CreateUserSuccessful;
 
   AppUser get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserSuccessfulCopyWith<CreateUserSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateUserSuccessfulCopyWith<CreateUserSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreateUserErrorCopyWith<$Res> {
-  factory $CreateUserErrorCopyWith(
-          CreateUserError value, $Res Function(CreateUserError) then) =
+  factory $CreateUserErrorCopyWith(CreateUserError value, $Res Function(CreateUserError) then) =
       _$CreateUserErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
@@ -438,8 +398,7 @@ abstract class $CreateUserErrorCopyWith<$Res> {
 /// @nodoc
 class _$CreateUserErrorCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
     implements $CreateUserErrorCopyWith<$Res> {
-  _$CreateUserErrorCopyWithImpl(
-      CreateUserError _value, $Res Function(CreateUserError) _then)
+  _$CreateUserErrorCopyWithImpl(CreateUserError _value, $Res Function(CreateUserError) _then)
       : super(_value, (v) => _then(v as CreateUserError));
 
   @override
@@ -484,15 +443,12 @@ class _$CreateUserError implements CreateUserError {
         (other.runtimeType == runtimeType &&
             other is CreateUserError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace));
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(stackTrace));
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
 
   @JsonKey(ignore: true)
   @override
@@ -502,9 +458,7 @@ class _$CreateUserError implements CreateUserError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -514,9 +468,7 @@ class _$CreateUserError implements CreateUserError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -526,9 +478,7 @@ class _$CreateUserError implements CreateUserError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, String username,
-            ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, String username, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -575,14 +525,12 @@ class _$CreateUserError implements CreateUserError {
 }
 
 abstract class CreateUserError implements CreateUser, ErrorAction {
-  const factory CreateUserError(
-      final Object error, final StackTrace stackTrace) = _$CreateUserError;
+  const factory CreateUserError(final Object error, final StackTrace stackTrace) = _$CreateUserError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserErrorCopyWith<CreateUserError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CreateUserErrorCopyWith<CreateUserError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -635,14 +583,12 @@ mixin _$GetCurrentUser {
 
 /// @nodoc
 abstract class $GetCurrentUserCopyWith<$Res> {
-  factory $GetCurrentUserCopyWith(
-          GetCurrentUser value, $Res Function(GetCurrentUser) then) =
+  factory $GetCurrentUserCopyWith(GetCurrentUser value, $Res Function(GetCurrentUser) then) =
       _$GetCurrentUserCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GetCurrentUserCopyWithImpl<$Res>
-    implements $GetCurrentUserCopyWith<$Res> {
+class _$GetCurrentUserCopyWithImpl<$Res> implements $GetCurrentUserCopyWith<$Res> {
   _$GetCurrentUserCopyWithImpl(this._value, this._then);
 
   final GetCurrentUser _value;
@@ -652,17 +598,14 @@ class _$GetCurrentUserCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class $GetCurrentUserStartCopyWith<$Res> {
-  factory $GetCurrentUserStartCopyWith(
-          GetCurrentUserStart value, $Res Function(GetCurrentUserStart) then) =
+  factory $GetCurrentUserStartCopyWith(GetCurrentUserStart value, $Res Function(GetCurrentUserStart) then) =
       _$GetCurrentUserStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GetCurrentUserStartCopyWithImpl<$Res>
-    extends _$GetCurrentUserCopyWithImpl<$Res>
+class _$GetCurrentUserStartCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
     implements $GetCurrentUserStartCopyWith<$Res> {
-  _$GetCurrentUserStartCopyWithImpl(
-      GetCurrentUserStart _value, $Res Function(GetCurrentUserStart) _then)
+  _$GetCurrentUserStartCopyWithImpl(GetCurrentUserStart _value, $Res Function(GetCurrentUserStart) _then)
       : super(_value, (v) => _then(v as GetCurrentUserStart));
 
   @override
@@ -681,8 +624,7 @@ class _$GetCurrentUserStart implements GetCurrentUserStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GetCurrentUserStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is GetCurrentUserStart);
   }
 
   @override
@@ -763,8 +705,8 @@ abstract class GetCurrentUserStart implements GetCurrentUser {
 
 /// @nodoc
 abstract class $GetCurrentUserSuccessfulCopyWith<$Res> {
-  factory $GetCurrentUserSuccessfulCopyWith(GetCurrentUserSuccessful value,
-          $Res Function(GetCurrentUserSuccessful) then) =
+  factory $GetCurrentUserSuccessfulCopyWith(
+          GetCurrentUserSuccessful value, $Res Function(GetCurrentUserSuccessful) then) =
       _$GetCurrentUserSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser? user});
 
@@ -772,16 +714,13 @@ abstract class $GetCurrentUserSuccessfulCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetCurrentUserSuccessfulCopyWithImpl<$Res>
-    extends _$GetCurrentUserCopyWithImpl<$Res>
+class _$GetCurrentUserSuccessfulCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
     implements $GetCurrentUserSuccessfulCopyWith<$Res> {
-  _$GetCurrentUserSuccessfulCopyWithImpl(GetCurrentUserSuccessful _value,
-      $Res Function(GetCurrentUserSuccessful) _then)
+  _$GetCurrentUserSuccessfulCopyWithImpl(GetCurrentUserSuccessful _value, $Res Function(GetCurrentUserSuccessful) _then)
       : super(_value, (v) => _then(v as GetCurrentUserSuccessful));
 
   @override
-  GetCurrentUserSuccessful get _value =>
-      super._value as GetCurrentUserSuccessful;
+  GetCurrentUserSuccessful get _value => super._value as GetCurrentUserSuccessful;
 
   @override
   $Res call({
@@ -829,14 +768,12 @@ class _$GetCurrentUserSuccessful implements GetCurrentUserSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
   $GetCurrentUserSuccessfulCopyWith<GetCurrentUserSuccessful> get copyWith =>
-      _$GetCurrentUserSuccessfulCopyWithImpl<GetCurrentUserSuccessful>(
-          this, _$identity);
+      _$GetCurrentUserSuccessfulCopyWithImpl<GetCurrentUserSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -908,29 +845,24 @@ class _$GetCurrentUserSuccessful implements GetCurrentUserSuccessful {
 }
 
 abstract class GetCurrentUserSuccessful implements GetCurrentUser, UserAction {
-  const factory GetCurrentUserSuccessful(final AppUser? user) =
-      _$GetCurrentUserSuccessful;
+  const factory GetCurrentUserSuccessful(final AppUser? user) = _$GetCurrentUserSuccessful;
 
   AppUser? get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetCurrentUserSuccessfulCopyWith<GetCurrentUserSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetCurrentUserSuccessfulCopyWith<GetCurrentUserSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetCurrentUserErrorCopyWith<$Res> {
-  factory $GetCurrentUserErrorCopyWith(
-          GetCurrentUserError value, $Res Function(GetCurrentUserError) then) =
+  factory $GetCurrentUserErrorCopyWith(GetCurrentUserError value, $Res Function(GetCurrentUserError) then) =
       _$GetCurrentUserErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$GetCurrentUserErrorCopyWithImpl<$Res>
-    extends _$GetCurrentUserCopyWithImpl<$Res>
+class _$GetCurrentUserErrorCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
     implements $GetCurrentUserErrorCopyWith<$Res> {
-  _$GetCurrentUserErrorCopyWithImpl(
-      GetCurrentUserError _value, $Res Function(GetCurrentUserError) _then)
+  _$GetCurrentUserErrorCopyWithImpl(GetCurrentUserError _value, $Res Function(GetCurrentUserError) _then)
       : super(_value, (v) => _then(v as GetCurrentUserError));
 
   @override
@@ -975,15 +907,12 @@ class _$GetCurrentUserError implements GetCurrentUserError {
         (other.runtimeType == runtimeType &&
             other is GetCurrentUserError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace));
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(stackTrace));
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
 
   @JsonKey(ignore: true)
   @override
@@ -1060,14 +989,12 @@ class _$GetCurrentUserError implements GetCurrentUserError {
 }
 
 abstract class GetCurrentUserError implements GetCurrentUser, ErrorAction {
-  const factory GetCurrentUserError(
-      final Object error, final StackTrace stackTrace) = _$GetCurrentUserError;
+  const factory GetCurrentUserError(final Object error, final StackTrace stackTrace) = _$GetCurrentUserError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetCurrentUserErrorCopyWith<GetCurrentUserError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetCurrentUserErrorCopyWith<GetCurrentUserError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1120,8 +1047,7 @@ mixin _$GetMovies {
 
 /// @nodoc
 abstract class $GetMoviesCopyWith<$Res> {
-  factory $GetMoviesCopyWith(GetMovies value, $Res Function(GetMovies) then) =
-      _$GetMoviesCopyWithImpl<$Res>;
+  factory $GetMoviesCopyWith(GetMovies value, $Res Function(GetMovies) then) = _$GetMoviesCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1135,8 +1061,7 @@ class _$GetMoviesCopyWithImpl<$Res> implements $GetMoviesCopyWith<$Res> {
 
 /// @nodoc
 abstract class $GetMoviesStartCopyWith<$Res> {
-  factory $GetMoviesStartCopyWith(
-          GetMoviesStart value, $Res Function(GetMoviesStart) then) =
+  factory $GetMoviesStartCopyWith(GetMoviesStart value, $Res Function(GetMoviesStart) then) =
       _$GetMoviesStartCopyWithImpl<$Res>;
   $Res call({ActionResult onResult});
 }
@@ -1144,8 +1069,7 @@ abstract class $GetMoviesStartCopyWith<$Res> {
 /// @nodoc
 class _$GetMoviesStartCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
     implements $GetMoviesStartCopyWith<$Res> {
-  _$GetMoviesStartCopyWithImpl(
-      GetMoviesStart _value, $Res Function(GetMoviesStart) _then)
+  _$GetMoviesStartCopyWithImpl(GetMoviesStart _value, $Res Function(GetMoviesStart) _then)
       : super(_value, (v) => _then(v as GetMoviesStart));
 
   @override
@@ -1182,8 +1106,7 @@ class _$GetMoviesStart implements GetMoviesStart {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is GetMoviesStart &&
-            (identical(other.onResult, onResult) ||
-                other.onResult == onResult));
+            (identical(other.onResult, onResult) || other.onResult == onResult));
   }
 
   @override
@@ -1268,24 +1191,20 @@ abstract class GetMoviesStart implements GetMovies {
 
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesStartCopyWith<GetMoviesStart> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetMoviesStartCopyWith<GetMoviesStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetMoviesSuccessfulCopyWith<$Res> {
-  factory $GetMoviesSuccessfulCopyWith(
-          GetMoviesSuccessful value, $Res Function(GetMoviesSuccessful) then) =
+  factory $GetMoviesSuccessfulCopyWith(GetMoviesSuccessful value, $Res Function(GetMoviesSuccessful) then) =
       _$GetMoviesSuccessfulCopyWithImpl<$Res>;
   $Res call({List<Movie> movies});
 }
 
 /// @nodoc
-class _$GetMoviesSuccessfulCopyWithImpl<$Res>
-    extends _$GetMoviesCopyWithImpl<$Res>
+class _$GetMoviesSuccessfulCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
     implements $GetMoviesSuccessfulCopyWith<$Res> {
-  _$GetMoviesSuccessfulCopyWithImpl(
-      GetMoviesSuccessful _value, $Res Function(GetMoviesSuccessful) _then)
+  _$GetMoviesSuccessfulCopyWithImpl(GetMoviesSuccessful _value, $Res Function(GetMoviesSuccessful) _then)
       : super(_value, (v) => _then(v as GetMoviesSuccessful));
 
   @override
@@ -1330,8 +1249,7 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(movies));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movies));
 
   @JsonKey(ignore: true)
   @override
@@ -1408,19 +1326,16 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
 }
 
 abstract class GetMoviesSuccessful implements GetMovies {
-  const factory GetMoviesSuccessful(final List<Movie> movies) =
-      _$GetMoviesSuccessful;
+  const factory GetMoviesSuccessful(final List<Movie> movies) = _$GetMoviesSuccessful;
 
   List<Movie> get movies => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesSuccessfulCopyWith<GetMoviesSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetMoviesSuccessfulCopyWith<GetMoviesSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GetMoviesErrorCopyWith<$Res> {
-  factory $GetMoviesErrorCopyWith(
-          GetMoviesError value, $Res Function(GetMoviesError) then) =
+  factory $GetMoviesErrorCopyWith(GetMoviesError value, $Res Function(GetMoviesError) then) =
       _$GetMoviesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
@@ -1428,8 +1343,7 @@ abstract class $GetMoviesErrorCopyWith<$Res> {
 /// @nodoc
 class _$GetMoviesErrorCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
     implements $GetMoviesErrorCopyWith<$Res> {
-  _$GetMoviesErrorCopyWithImpl(
-      GetMoviesError _value, $Res Function(GetMoviesError) _then)
+  _$GetMoviesErrorCopyWithImpl(GetMoviesError _value, $Res Function(GetMoviesError) _then)
       : super(_value, (v) => _then(v as GetMoviesError));
 
   @override
@@ -1474,15 +1388,12 @@ class _$GetMoviesError implements GetMoviesError {
         (other.runtimeType == runtimeType &&
             other is GetMoviesError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace));
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(stackTrace));
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
 
   @JsonKey(ignore: true)
   @override
@@ -1559,38 +1470,33 @@ class _$GetMoviesError implements GetMoviesError {
 }
 
 abstract class GetMoviesError implements GetMovies, ErrorAction {
-  const factory GetMoviesError(
-      final Object error, final StackTrace stackTrace) = _$GetMoviesError;
+  const factory GetMoviesError(final Object error, final StackTrace stackTrace) = _$GetMoviesError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesErrorCopyWith<GetMoviesError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GetMoviesErrorCopyWith<GetMoviesError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 mixin _$Login {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1622,8 +1528,7 @@ mixin _$Login {
 
 /// @nodoc
 abstract class $LoginCopyWith<$Res> {
-  factory $LoginCopyWith(Login value, $Res Function(Login) then) =
-      _$LoginCopyWithImpl<$Res>;
+  factory $LoginCopyWith(Login value, $Res Function(Login) then) = _$LoginCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1637,15 +1542,12 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
 
 /// @nodoc
 abstract class $LoginStartCopyWith<$Res> {
-  factory $LoginStartCopyWith(
-          LoginStart value, $Res Function(LoginStart) then) =
-      _$LoginStartCopyWithImpl<$Res>;
+  factory $LoginStartCopyWith(LoginStart value, $Res Function(LoginStart) then) = _$LoginStartCopyWithImpl<$Res>;
   $Res call({String email, String password, ActionResult onResult});
 }
 
 /// @nodoc
-class _$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
-    implements $LoginStartCopyWith<$Res> {
+class _$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginStartCopyWith<$Res> {
   _$LoginStartCopyWithImpl(LoginStart _value, $Res Function(LoginStart) _then)
       : super(_value, (v) => _then(v as LoginStart));
 
@@ -1678,8 +1580,7 @@ class _$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoginStart implements LoginStart {
-  const _$LoginStart(
-      {required this.email, required this.password, required this.onResult});
+  const _$LoginStart({required this.email, required this.password, required this.onResult});
 
   @override
   final String email;
@@ -1700,27 +1601,21 @@ class _$LoginStart implements LoginStart {
             other is LoginStart &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
-            (identical(other.onResult, onResult) ||
-                other.onResult == onResult));
+            (identical(other.onResult, onResult) || other.onResult == onResult));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(email),
-      const DeepCollectionEquality().hash(password),
-      onResult);
+      runtimeType, const DeepCollectionEquality().hash(email), const DeepCollectionEquality().hash(password), onResult);
 
   @JsonKey(ignore: true)
   @override
-  $LoginStartCopyWith<LoginStart> get copyWith =>
-      _$LoginStartCopyWithImpl<LoginStart>(this, _$identity);
+  $LoginStartCopyWith<LoginStart> get copyWith => _$LoginStartCopyWithImpl<LoginStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1730,8 +1625,7 @@ class _$LoginStart implements LoginStart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -1741,8 +1635,7 @@ class _$LoginStart implements LoginStart {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1798,14 +1691,12 @@ abstract class LoginStart implements Login {
   String get password => throw _privateConstructorUsedError;
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginStartCopyWith<LoginStart> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LoginStartCopyWith<LoginStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LoginSuccessfulCopyWith<$Res> {
-  factory $LoginSuccessfulCopyWith(
-          LoginSuccessful value, $Res Function(LoginSuccessful) then) =
+  factory $LoginSuccessfulCopyWith(LoginSuccessful value, $Res Function(LoginSuccessful) then) =
       _$LoginSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser user});
 
@@ -1813,10 +1704,8 @@ abstract class $LoginSuccessfulCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoginSuccessfulCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
-    implements $LoginSuccessfulCopyWith<$Res> {
-  _$LoginSuccessfulCopyWithImpl(
-      LoginSuccessful _value, $Res Function(LoginSuccessful) _then)
+class _$LoginSuccessfulCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginSuccessfulCopyWith<$Res> {
+  _$LoginSuccessfulCopyWithImpl(LoginSuccessful _value, $Res Function(LoginSuccessful) _then)
       : super(_value, (v) => _then(v as LoginSuccessful));
 
   @override
@@ -1864,8 +1753,7 @@ class _$LoginSuccessful implements LoginSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
@@ -1875,8 +1763,7 @@ class _$LoginSuccessful implements LoginSuccessful {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1886,8 +1773,7 @@ class _$LoginSuccessful implements LoginSuccessful {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -1897,8 +1783,7 @@ class _$LoginSuccessful implements LoginSuccessful {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1949,21 +1834,17 @@ abstract class LoginSuccessful implements Login, UserAction {
 
   AppUser get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginSuccessfulCopyWith<LoginSuccessful> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LoginSuccessfulCopyWith<LoginSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LoginErrorCopyWith<$Res> {
-  factory $LoginErrorCopyWith(
-          LoginError value, $Res Function(LoginError) then) =
-      _$LoginErrorCopyWithImpl<$Res>;
+  factory $LoginErrorCopyWith(LoginError value, $Res Function(LoginError) then) = _$LoginErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$LoginErrorCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
-    implements $LoginErrorCopyWith<$Res> {
+class _$LoginErrorCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginErrorCopyWith<$Res> {
   _$LoginErrorCopyWithImpl(LoginError _value, $Res Function(LoginError) _then)
       : super(_value, (v) => _then(v as LoginError));
 
@@ -2009,26 +1890,21 @@ class _$LoginError implements LoginError {
         (other.runtimeType == runtimeType &&
             other is LoginError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace));
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(stackTrace));
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
 
   @JsonKey(ignore: true)
   @override
-  $LoginErrorCopyWith<LoginError> get copyWith =>
-      _$LoginErrorCopyWithImpl<LoginError>(this, _$identity);
+  $LoginErrorCopyWith<LoginError> get copyWith => _$LoginErrorCopyWithImpl<LoginError>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult) $default, {
     required TResult Function(AppUser user) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -2038,8 +1914,7 @@ class _$LoginError implements LoginError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -2049,8 +1924,7 @@ class _$LoginError implements LoginError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(String email, String password, ActionResult onResult)?
-        $default, {
+    TResult Function(String email, String password, ActionResult onResult)? $default, {
     TResult Function(AppUser user)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -2097,14 +1971,12 @@ class _$LoginError implements LoginError {
 }
 
 abstract class LoginError implements Login, ErrorAction {
-  const factory LoginError(final Object error, final StackTrace stackTrace) =
-      _$LoginError;
+  const factory LoginError(final Object error, final StackTrace stackTrace) = _$LoginError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginErrorCopyWith<LoginError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LoginErrorCopyWith<LoginError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2113,25 +1985,21 @@ mixin _$UpdateFavorites {
   TResult when<TResult extends Object?>(
     TResult Function(int id, bool add) $default, {
     required TResult Function() successful,
-    required TResult Function(
-            Object error, StackTrace stackTrace, int id, bool add)
-        error,
+    required TResult Function(Object error, StackTrace stackTrace, int id, bool add) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2161,14 +2029,12 @@ mixin _$UpdateFavorites {
 
 /// @nodoc
 abstract class $UpdateFavoritesCopyWith<$Res> {
-  factory $UpdateFavoritesCopyWith(
-          UpdateFavorites value, $Res Function(UpdateFavorites) then) =
+  factory $UpdateFavoritesCopyWith(UpdateFavorites value, $Res Function(UpdateFavorites) then) =
       _$UpdateFavoritesCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UpdateFavoritesCopyWithImpl<$Res>
-    implements $UpdateFavoritesCopyWith<$Res> {
+class _$UpdateFavoritesCopyWithImpl<$Res> implements $UpdateFavoritesCopyWith<$Res> {
   _$UpdateFavoritesCopyWithImpl(this._value, this._then);
 
   final UpdateFavorites _value;
@@ -2178,18 +2044,15 @@ class _$UpdateFavoritesCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class $UpdateFavoritesStartCopyWith<$Res> {
-  factory $UpdateFavoritesStartCopyWith(UpdateFavoritesStart value,
-          $Res Function(UpdateFavoritesStart) then) =
+  factory $UpdateFavoritesStartCopyWith(UpdateFavoritesStart value, $Res Function(UpdateFavoritesStart) then) =
       _$UpdateFavoritesStartCopyWithImpl<$Res>;
   $Res call({int id, bool add});
 }
 
 /// @nodoc
-class _$UpdateFavoritesStartCopyWithImpl<$Res>
-    extends _$UpdateFavoritesCopyWithImpl<$Res>
+class _$UpdateFavoritesStartCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
     implements $UpdateFavoritesStartCopyWith<$Res> {
-  _$UpdateFavoritesStartCopyWithImpl(
-      UpdateFavoritesStart _value, $Res Function(UpdateFavoritesStart) _then)
+  _$UpdateFavoritesStartCopyWithImpl(UpdateFavoritesStart _value, $Res Function(UpdateFavoritesStart) _then)
       : super(_value, (v) => _then(v as UpdateFavoritesStart));
 
   @override
@@ -2238,25 +2101,20 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(add));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id), const DeepCollectionEquality().hash(add));
 
   @JsonKey(ignore: true)
   @override
   $UpdateFavoritesStartCopyWith<UpdateFavoritesStart> get copyWith =>
-      _$UpdateFavoritesStartCopyWithImpl<UpdateFavoritesStart>(
-          this, _$identity);
+      _$UpdateFavoritesStartCopyWithImpl<UpdateFavoritesStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(int id, bool add) $default, {
     required TResult Function() successful,
-    required TResult Function(
-            Object error, StackTrace stackTrace, int id, bool add)
-        error,
+    required TResult Function(Object error, StackTrace stackTrace, int id, bool add) error,
   }) {
     return $default(id, add);
   }
@@ -2266,8 +2124,7 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
   }) {
     return $default?.call(id, add);
   }
@@ -2277,8 +2134,7 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -2323,34 +2179,30 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
 }
 
 abstract class UpdateFavoritesStart implements UpdateFavorites {
-  const factory UpdateFavoritesStart(final int id, {required final bool add}) =
-      _$UpdateFavoritesStart;
+  const factory UpdateFavoritesStart(final int id, {required final bool add}) = _$UpdateFavoritesStart;
 
   int get id => throw _privateConstructorUsedError;
   bool get add => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateFavoritesStartCopyWith<UpdateFavoritesStart> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UpdateFavoritesStartCopyWith<UpdateFavoritesStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UpdateFavoritesSuccessfulCopyWith<$Res> {
-  factory $UpdateFavoritesSuccessfulCopyWith(UpdateFavoritesSuccessful value,
-          $Res Function(UpdateFavoritesSuccessful) then) =
+  factory $UpdateFavoritesSuccessfulCopyWith(
+          UpdateFavoritesSuccessful value, $Res Function(UpdateFavoritesSuccessful) then) =
       _$UpdateFavoritesSuccessfulCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UpdateFavoritesSuccessfulCopyWithImpl<$Res>
-    extends _$UpdateFavoritesCopyWithImpl<$Res>
+class _$UpdateFavoritesSuccessfulCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
     implements $UpdateFavoritesSuccessfulCopyWith<$Res> {
-  _$UpdateFavoritesSuccessfulCopyWithImpl(UpdateFavoritesSuccessful _value,
-      $Res Function(UpdateFavoritesSuccessful) _then)
+  _$UpdateFavoritesSuccessfulCopyWithImpl(
+      UpdateFavoritesSuccessful _value, $Res Function(UpdateFavoritesSuccessful) _then)
       : super(_value, (v) => _then(v as UpdateFavoritesSuccessful));
 
   @override
-  UpdateFavoritesSuccessful get _value =>
-      super._value as UpdateFavoritesSuccessful;
+  UpdateFavoritesSuccessful get _value => super._value as UpdateFavoritesSuccessful;
 }
 
 /// @nodoc
@@ -2365,9 +2217,7 @@ class _$UpdateFavoritesSuccessful implements UpdateFavoritesSuccessful {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is UpdateFavoritesSuccessful);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is UpdateFavoritesSuccessful);
   }
 
   @override
@@ -2378,9 +2228,7 @@ class _$UpdateFavoritesSuccessful implements UpdateFavoritesSuccessful {
   TResult when<TResult extends Object?>(
     TResult Function(int id, bool add) $default, {
     required TResult Function() successful,
-    required TResult Function(
-            Object error, StackTrace stackTrace, int id, bool add)
-        error,
+    required TResult Function(Object error, StackTrace stackTrace, int id, bool add) error,
   }) {
     return successful();
   }
@@ -2390,8 +2238,7 @@ class _$UpdateFavoritesSuccessful implements UpdateFavoritesSuccessful {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
   }) {
     return successful?.call();
   }
@@ -2401,8 +2248,7 @@ class _$UpdateFavoritesSuccessful implements UpdateFavoritesSuccessful {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
     required TResult orElse(),
   }) {
     if (successful != null) {
@@ -2452,18 +2298,15 @@ abstract class UpdateFavoritesSuccessful implements UpdateFavorites {
 
 /// @nodoc
 abstract class $UpdateFavoritesErrorCopyWith<$Res> {
-  factory $UpdateFavoritesErrorCopyWith(UpdateFavoritesError value,
-          $Res Function(UpdateFavoritesError) then) =
+  factory $UpdateFavoritesErrorCopyWith(UpdateFavoritesError value, $Res Function(UpdateFavoritesError) then) =
       _$UpdateFavoritesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace, int id, bool add});
 }
 
 /// @nodoc
-class _$UpdateFavoritesErrorCopyWithImpl<$Res>
-    extends _$UpdateFavoritesCopyWithImpl<$Res>
+class _$UpdateFavoritesErrorCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
     implements $UpdateFavoritesErrorCopyWith<$Res> {
-  _$UpdateFavoritesErrorCopyWithImpl(
-      UpdateFavoritesError _value, $Res Function(UpdateFavoritesError) _then)
+  _$UpdateFavoritesErrorCopyWithImpl(UpdateFavoritesError _value, $Res Function(UpdateFavoritesError) _then)
       : super(_value, (v) => _then(v as UpdateFavoritesError));
 
   @override
@@ -2500,8 +2343,7 @@ class _$UpdateFavoritesErrorCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UpdateFavoritesError implements UpdateFavoritesError {
-  const _$UpdateFavoritesError(this.error, this.stackTrace, this.id,
-      {required this.add});
+  const _$UpdateFavoritesError(this.error, this.stackTrace, this.id, {required this.add});
 
   @override
   final Object error;
@@ -2523,8 +2365,7 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
         (other.runtimeType == runtimeType &&
             other is UpdateFavoritesError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace) &&
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.add, add));
   }
@@ -2540,17 +2381,14 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
   @JsonKey(ignore: true)
   @override
   $UpdateFavoritesErrorCopyWith<UpdateFavoritesError> get copyWith =>
-      _$UpdateFavoritesErrorCopyWithImpl<UpdateFavoritesError>(
-          this, _$identity);
+      _$UpdateFavoritesErrorCopyWithImpl<UpdateFavoritesError>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(int id, bool add) $default, {
     required TResult Function() successful,
-    required TResult Function(
-            Object error, StackTrace stackTrace, int id, bool add)
-        error,
+    required TResult Function(Object error, StackTrace stackTrace, int id, bool add) error,
   }) {
     return error(this.error, stackTrace, id, add);
   }
@@ -2560,8 +2398,7 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
   }) {
     return error?.call(this.error, stackTrace, id, add);
   }
@@ -2571,8 +2408,7 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(int id, bool add)? $default, {
     TResult Function()? successful,
-    TResult Function(Object error, StackTrace stackTrace, int id, bool add)?
-        error,
+    TResult Function(Object error, StackTrace stackTrace, int id, bool add)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2617,8 +2453,7 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
 }
 
 abstract class UpdateFavoritesError implements UpdateFavorites, ErrorAction {
-  const factory UpdateFavoritesError(
-      final Object error, final StackTrace stackTrace, final int id,
+  const factory UpdateFavoritesError(final Object error, final StackTrace stackTrace, final int id,
       {required final bool add}) = _$UpdateFavoritesError;
 
   Object get error => throw _privateConstructorUsedError;
@@ -2626,8 +2461,7 @@ abstract class UpdateFavoritesError implements UpdateFavorites, ErrorAction {
   int get id => throw _privateConstructorUsedError;
   bool get add => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateFavoritesErrorCopyWith<UpdateFavoritesError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UpdateFavoritesErrorCopyWith<UpdateFavoritesError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2680,8 +2514,7 @@ mixin _$Logout {
 
 /// @nodoc
 abstract class $LogoutCopyWith<$Res> {
-  factory $LogoutCopyWith(Logout value, $Res Function(Logout) then) =
-      _$LogoutCopyWithImpl<$Res>;
+  factory $LogoutCopyWith(Logout value, $Res Function(Logout) then) = _$LogoutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -2695,16 +2528,12 @@ class _$LogoutCopyWithImpl<$Res> implements $LogoutCopyWith<$Res> {
 
 /// @nodoc
 abstract class $LogoutStartCopyWith<$Res> {
-  factory $LogoutStartCopyWith(
-          LogoutStart value, $Res Function(LogoutStart) then) =
-      _$LogoutStartCopyWithImpl<$Res>;
+  factory $LogoutStartCopyWith(LogoutStart value, $Res Function(LogoutStart) then) = _$LogoutStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LogoutStartCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res>
-    implements $LogoutStartCopyWith<$Res> {
-  _$LogoutStartCopyWithImpl(
-      LogoutStart _value, $Res Function(LogoutStart) _then)
+class _$LogoutStartCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements $LogoutStartCopyWith<$Res> {
+  _$LogoutStartCopyWithImpl(LogoutStart _value, $Res Function(LogoutStart) _then)
       : super(_value, (v) => _then(v as LogoutStart));
 
   @override
@@ -2723,8 +2552,7 @@ class _$LogoutStart implements LogoutStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LogoutStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is LogoutStart);
   }
 
   @override
@@ -2805,16 +2633,14 @@ abstract class LogoutStart implements Logout {
 
 /// @nodoc
 abstract class $LogoutSuccessfulCopyWith<$Res> {
-  factory $LogoutSuccessfulCopyWith(
-          LogoutSuccessful value, $Res Function(LogoutSuccessful) then) =
+  factory $LogoutSuccessfulCopyWith(LogoutSuccessful value, $Res Function(LogoutSuccessful) then) =
       _$LogoutSuccessfulCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class _$LogoutSuccessfulCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res>
     implements $LogoutSuccessfulCopyWith<$Res> {
-  _$LogoutSuccessfulCopyWithImpl(
-      LogoutSuccessful _value, $Res Function(LogoutSuccessful) _then)
+  _$LogoutSuccessfulCopyWithImpl(LogoutSuccessful _value, $Res Function(LogoutSuccessful) _then)
       : super(_value, (v) => _then(v as LogoutSuccessful));
 
   @override
@@ -2833,8 +2659,7 @@ class _$LogoutSuccessful implements LogoutSuccessful {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LogoutSuccessful);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is LogoutSuccessful);
   }
 
   @override
@@ -2915,17 +2740,13 @@ abstract class LogoutSuccessful implements Logout {
 
 /// @nodoc
 abstract class $LogoutErrorCopyWith<$Res> {
-  factory $LogoutErrorCopyWith(
-          LogoutError value, $Res Function(LogoutError) then) =
-      _$LogoutErrorCopyWithImpl<$Res>;
+  factory $LogoutErrorCopyWith(LogoutError value, $Res Function(LogoutError) then) = _$LogoutErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$LogoutErrorCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res>
-    implements $LogoutErrorCopyWith<$Res> {
-  _$LogoutErrorCopyWithImpl(
-      LogoutError _value, $Res Function(LogoutError) _then)
+class _$LogoutErrorCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements $LogoutErrorCopyWith<$Res> {
+  _$LogoutErrorCopyWithImpl(LogoutError _value, $Res Function(LogoutError) _then)
       : super(_value, (v) => _then(v as LogoutError));
 
   @override
@@ -2970,20 +2791,16 @@ class _$LogoutError implements LogoutError {
         (other.runtimeType == runtimeType &&
             other is LogoutError &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            const DeepCollectionEquality()
-                .equals(other.stackTrace, stackTrace));
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(error),
-      const DeepCollectionEquality().hash(stackTrace));
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
 
   @JsonKey(ignore: true)
   @override
-  $LogoutErrorCopyWith<LogoutError> get copyWith =>
-      _$LogoutErrorCopyWithImpl<LogoutError>(this, _$identity);
+  $LogoutErrorCopyWith<LogoutError> get copyWith => _$LogoutErrorCopyWithImpl<LogoutError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3055,12 +2872,10 @@ class _$LogoutError implements LogoutError {
 }
 
 abstract class LogoutError implements Logout, ErrorAction {
-  const factory LogoutError(final Object error, final StackTrace stackTrace) =
-      _$LogoutError;
+  const factory LogoutError(final Object error, final StackTrace stackTrace) = _$LogoutError;
 
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LogoutErrorCopyWith<LogoutError> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LogoutErrorCopyWith<LogoutError> get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,8 +13,7 @@ class AuthApi implements AuthApiBase {
   Future<AppUser?> getCurrentUser() async {
     final User? currentUser = _auth.currentUser;
     if (currentUser != null) {
-      final DocumentSnapshot<Map<String, dynamic>> snapshot =
-          await _firestore.doc('users/${currentUser.uid}').get();
+      final DocumentSnapshot<Map<String, dynamic>> snapshot = await _firestore.doc('users/${currentUser.uid}').get();
 
       if (snapshot.exists) {
         return AppUser.fromJson(snapshot.data()!);
@@ -55,8 +54,7 @@ class AuthApi implements AuthApiBase {
     required String password,
     required String username,
   }) async {
-    final UserCredential credentials = await _auth
-        .createUserWithEmailAndPassword(email: email, password: password);
+    final UserCredential credentials = await _auth.createUserWithEmailAndPassword(email: email, password: password);
     await _auth.currentUser!.updateDisplayName(username);
 
     final AppUser user = AppUser(
@@ -78,8 +76,7 @@ class AuthApi implements AuthApiBase {
   @override
   Future<void> updateFavorites(String uid, int id, {required bool add}) async {
     await _firestore.runTransaction<void>((Transaction transaction) async {
-      final DocumentSnapshot<Map<String, dynamic>> snapshot =
-          await transaction.get(_firestore.doc('users/$uid'));
+      final DocumentSnapshot<Map<String, dynamic>> snapshot = await transaction.get(_firestore.doc('users/$uid'));
 
       AppUser user = AppUser.fromJson(snapshot.data()!);
 
