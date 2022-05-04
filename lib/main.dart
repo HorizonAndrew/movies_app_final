@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -14,21 +15,18 @@ import 'package:movies_app/presentation/sign_up_page.dart';
 import 'package:movies_app/reducer/reducer.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_epics/redux_epics.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final FirebaseApp app = await Firebase.initializeApp();
   final FirebaseAuth auth = FirebaseAuth.instanceFor(app: app);
-
+  final FirebaseFirestore firestore = FirebaseFirestore.instanceFor(app: app);
   //await auth.signOut();
 
-  final SharedPreferences preferences = await SharedPreferences.getInstance();
-
   final Client client = Client();
-  final MovieApi movieApi = MovieApi(client);
-  final AuthApi authApi = AuthApi(auth, preferences);
 
+  final MovieApi movieApi = MovieApi(client);
+  final AuthApi authApi = AuthApi(auth, firestore);
   final AppEpic epic = AppEpic(movieApi, authApi);
 
   final Store<AppState> store = Store<AppState>(
