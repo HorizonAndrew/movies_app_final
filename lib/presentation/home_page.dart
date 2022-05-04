@@ -20,19 +20,16 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    StoreProvider.of<AppState>(context, listen: false)
-        .dispatch(GetMovies(_onResult));
+    StoreProvider.of<AppState>(context, listen: false).dispatch(GetMovies(_onResult));
     _controller.addListener(_onScroll);
   }
 
   void _onResult(AppAction action) {
     if (action is GetMoviesSuccessful) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('Page loaded')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Page loaded')));
     } else if (action is GetMoviesError) {
       final Object error = action.error;
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text('An error happened $error')));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error happened $error')));
     }
   }
 
@@ -41,9 +38,8 @@ class _HomePageState extends State<HomePage> {
     final double offset = _controller.offset;
     final Store<AppState> store = StoreProvider.of<AppState>(context);
 
-    if(offset >= extent - 200 && !store.state.isLoading) {
-      StoreProvider.of<AppState>(context)
-          .dispatch(GetMovies(_onResult));
+    if (offset >= extent - MediaQuery.of(context).size.height && !store.state.isLoading) {
+      StoreProvider.of<AppState>(context).dispatch(GetMovies(_onResult));
     }
   }
 
@@ -85,20 +81,20 @@ class _HomePageState extends State<HomePage> {
                     itemBuilder: (BuildContext context, int index) {
                       final Movie movie = movies[index];
 
-                      final bool isFavorite =
-                          user!.favoriteMovies.contains(movie.id);
+                      final bool isFavorite = user!.favoriteMovies.contains(movie.id);
 
                       return Column(
                         children: <Widget>[
                           Stack(
                             children: <Widget>[
-                              Image.network(movie.poster),
+                              SizedBox(
+                                height: 350,
+                                child: Image.network(movie.poster),
+                              ),
                               IconButton(
                                 color: Colors.red,
                                 icon: Icon(
-                                  isFavorite
-                                      ? Icons.favorite
-                                      : Icons.favorite_border,
+                                  isFavorite ? Icons.favorite : Icons.favorite_border,
                                 ),
                                 onPressed: () {
                                   StoreProvider.of<AppState>(context).dispatch(
