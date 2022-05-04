@@ -1,17 +1,19 @@
 import 'dart:convert';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:movies_app/data/auth_base_api.dart';
 import 'package:movies_app/models/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String _kFavoriteMoviesKey = 'user_favorite_movies';
 
-class AuthApi {
+class AuthApi implements AuthApiBase{
   AuthApi(this._auth, this._preferences);
 
   final FirebaseAuth _auth;
   final SharedPreferences _preferences;
 
+  @override
   Future<AppUser?> getCurrentUser() async {
     if (_auth.currentUser != null) {
       final List<int> favorites = _getCurrentFavorites();
@@ -26,7 +28,9 @@ class AuthApi {
     return null;
   }
 
-  Future<AppUser> login({required String email, required String password}) async {
+  @override
+  Future<AppUser> login(
+      {required String email, required String password}) async {
     final UserCredential credential = await _auth.signInWithEmailAndPassword(
       email: email,
       password: password,
@@ -42,17 +46,25 @@ class AuthApi {
     );
   }
 
-  Future<AppUser> create({required String email, required String password, required String username}) async {
-    final UserCredential credentials = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+  @override
+  Future<AppUser> create(
+      {required String email,
+      required String password,
+      required String username}) async {
+    final UserCredential credentials = await _auth
+        .createUserWithEmailAndPassword(email: email, password: password);
     await _auth.currentUser!.updateDisplayName(username);
 
-    return AppUser(uid: credentials.user!.uid, email: email, username: username);
+    return AppUser(
+        uid: credentials.user!.uid, email: email, username: username);
   }
 
-  Future<void> signout() async {
-
+  @override
+  Future<void> logout() async {
+    await _auth.signOut();
   }
 
+  @override
   Future<void> updateFavorites(int id, {required bool add}) async {
     final List<int> ids = _getCurrentFavorites();
 

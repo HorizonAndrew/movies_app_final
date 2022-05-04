@@ -7,6 +7,7 @@ part 'get_current_user.dart';
 part 'get_movies.dart';
 part 'login.dart';
 part 'update_favorites.dart';
+part 'logout.dart';
 
 abstract class AppAction {}
 

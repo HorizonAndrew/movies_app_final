@@ -1,5 +1,5 @@
 import 'package:movies_app/actions/index.dart';
-import 'package:movies_app/data/auth_api.dart';
+import 'package:movies_app/data/auth_base_api.dart';
 import 'package:movies_app/models/index.dart';
 import 'package:redux_epics/redux_epics.dart';
 import 'package:rxdart/rxdart.dart';
@@ -7,7 +7,7 @@ import 'package:rxdart/rxdart.dart';
 class AuthEpic {
   AuthEpic(this._authApi);
 
-  final AuthApi _authApi;
+  final AuthApiBase _authApi;
 
   Epic<AppState> getEpics() {
     return combineEpics(<Epic<AppState>>[
@@ -15,6 +15,7 @@ class AuthEpic {
       TypedEpic<AppState, GetCurrentUserStart>(_getCurrentUserStart),
       TypedEpic<AppState, CreateUserStart>(_createUserStart),
       TypedEpic<AppState, UpdateFavoritesStart>(_updateFavoritesStart),
+      TypedEpic<AppState, LogoutStart>(_logoutStart),
     ]);
   }
 
@@ -60,6 +61,15 @@ class AuthEpic {
           add: action.add,
         );
       });
+    });
+  }
+
+  Stream<AppAction> _logoutStart(Stream<LogoutStart> actions, EpicStore<AppState> store) {
+    return actions.flatMap((LogoutStart action) {
+      return Stream<void>.value(null)
+          .asyncMap((_) => _authApi.logout())
+          .mapTo(const Logout.successful())
+          .onErrorReturnWith(Logout.error);
     });
   }
 }
