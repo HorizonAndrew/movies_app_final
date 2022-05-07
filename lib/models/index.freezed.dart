@@ -129,7 +129,7 @@ class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> impleme
 /// @nodoc
 
 class _$AppState$ implements AppState$ {
-  const _$AppState$({final List<Movie> movies = const <Movie>[], this.isLoading = true, this.pageNumber = 0, this.user})
+  const _$AppState$({final List<Movie> movies = const <Movie>[], this.isLoading = true, this.pageNumber = 1, this.user})
       : _movies = movies;
 
   final List<Movie> _movies;

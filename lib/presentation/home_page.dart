@@ -38,7 +38,8 @@ class _HomePageState extends State<HomePage> {
     final double offset = _controller.offset;
     final Store<AppState> store = StoreProvider.of<AppState>(context);
 
-    if (offset >= extent - MediaQuery.of(context).size.height && !store.state.isLoading) {
+    if (offset >= extent - (MediaQuery.of(context).size.height * 2) && !store.state.isLoading) {
+      // if (offset >= extent - 300 && !store.state.isLoading) {
       StoreProvider.of<AppState>(context).dispatch(GetMovies(_onResult));
     }
   }
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context, AppState state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Movies ${state.pageNumber}'),
+            title: Text('Movies ${state.pageNumber - 1}'),
             leading: IconButton(
               onPressed: () {
                 StoreProvider.of<AppState>(context).dispatch(const Logout());

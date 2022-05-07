@@ -30,7 +30,7 @@ class AuthEpic {
   }
 
   Stream<AppAction> _getCurrentUserStart(Stream<GetCurrentUserStart> actions, EpicStore<AppState> store) {
-    return actions.flatMap((GetCurrentUserStart value) {
+    return actions.flatMap((GetCurrentUserStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) => _authApi.getCurrentUser())
           .map(GetCurrentUser.successful)
