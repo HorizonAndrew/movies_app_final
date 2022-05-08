@@ -41,7 +41,6 @@ class _LoginPageState extends State<LoginPage> {
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('$error')));
       }
-      // TODO(andruh): send user to Sign Up screen
       if (kDebugMode) {
         print(action.error);
       }

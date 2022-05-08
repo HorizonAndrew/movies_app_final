@@ -84,35 +84,41 @@ class _HomePageState extends State<HomePage> {
 
                       final bool isFavorite = user!.favoriteMovies.contains(movie.id);
 
-                      return Column(
-                        children: <Widget>[
-                          Stack(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 350,
-                                child: Image.network(movie.poster),
-                              ),
-                              IconButton(
-                                color: Colors.red,
-                                icon: Icon(
-                                  isFavorite ? Icons.favorite : Icons.favorite_border,
+                      return GestureDetector(
+                        onTap: () {
+                          StoreProvider.of<AppState>(context).dispatch(SetSelectedMovieId(movie.id));
+                          Navigator.pushNamed(context, '/comments');
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Stack(
+                              children: <Widget>[
+                                SizedBox(
+                                  height: 350,
+                                  child: Image.network(movie.poster),
                                 ),
-                                onPressed: () {
-                                  StoreProvider.of<AppState>(context).dispatch(
-                                    UpdateFavorites(
-                                      movie.id,
-                                      add: !isFavorite,
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
-                          ),
-                          Text(movie.title),
-                          Text('${movie.year}'),
-                          Text(movie.genres.join(', ')),
-                          Text('${movie.rating}')
-                        ],
+                                IconButton(
+                                  color: Colors.red,
+                                  icon: Icon(
+                                    isFavorite ? Icons.favorite : Icons.favorite_border,
+                                  ),
+                                  onPressed: () {
+                                    StoreProvider.of<AppState>(context).dispatch(
+                                      UpdateFavorites(
+                                        movie.id,
+                                        add: !isFavorite,
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
+                            Text(movie.title),
+                            Text('${movie.year}'),
+                            Text(movie.genres.join(', ')),
+                            Text('${movie.rating}')
+                          ],
+                        ),
                       );
                     },
                   );

@@ -77,20 +77,20 @@ class _$CreateUserCopyWithImpl<$Res> implements $CreateUserCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CreateUserStartCopyWith<$Res> {
-  factory $CreateUserStartCopyWith(CreateUserStart value, $Res Function(CreateUserStart) then) =
-      _$CreateUserStartCopyWithImpl<$Res>;
+abstract class _$$CreateUserStartCopyWith<$Res> {
+  factory _$$CreateUserStartCopyWith(_$CreateUserStart value, $Res Function(_$CreateUserStart) then) =
+      __$$CreateUserStartCopyWithImpl<$Res>;
   $Res call({String email, String password, String username, ActionResult onResult});
 }
 
 /// @nodoc
-class _$CreateUserStartCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
-    implements $CreateUserStartCopyWith<$Res> {
-  _$CreateUserStartCopyWithImpl(CreateUserStart _value, $Res Function(CreateUserStart) _then)
-      : super(_value, (v) => _then(v as CreateUserStart));
+class __$$CreateUserStartCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
+    implements _$$CreateUserStartCopyWith<$Res> {
+  __$$CreateUserStartCopyWithImpl(_$CreateUserStart _value, $Res Function(_$CreateUserStart) _then)
+      : super(_value, (v) => _then(v as _$CreateUserStart));
 
   @override
-  CreateUserStart get _value => super._value as CreateUserStart;
+  _$CreateUserStart get _value => super._value as _$CreateUserStart;
 
   @override
   $Res call({
@@ -99,7 +99,7 @@ class _$CreateUserStartCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
     Object? username = freezed,
     Object? onResult = freezed,
   }) {
-    return _then(CreateUserStart(
+    return _then(_$CreateUserStart(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -144,7 +144,7 @@ class _$CreateUserStart implements CreateUserStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateUserStart &&
+            other is _$CreateUserStart &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.username, username) &&
@@ -157,8 +157,8 @@ class _$CreateUserStart implements CreateUserStart {
 
   @JsonKey(ignore: true)
   @override
-  $CreateUserStartCopyWith<CreateUserStart> get copyWith =>
-      _$CreateUserStartCopyWithImpl<CreateUserStart>(this, _$identity);
+  _$$CreateUserStartCopyWith<_$CreateUserStart> get copyWith =>
+      __$$CreateUserStartCopyWithImpl<_$CreateUserStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -241,32 +241,32 @@ abstract class CreateUserStart implements CreateUser {
   String get username => throw _privateConstructorUsedError;
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserStartCopyWith<CreateUserStart> get copyWith => throw _privateConstructorUsedError;
+  _$$CreateUserStartCopyWith<_$CreateUserStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateUserSuccessfulCopyWith<$Res> {
-  factory $CreateUserSuccessfulCopyWith(CreateUserSuccessful value, $Res Function(CreateUserSuccessful) then) =
-      _$CreateUserSuccessfulCopyWithImpl<$Res>;
+abstract class _$$CreateUserSuccessfulCopyWith<$Res> {
+  factory _$$CreateUserSuccessfulCopyWith(_$CreateUserSuccessful value, $Res Function(_$CreateUserSuccessful) then) =
+      __$$CreateUserSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser user});
 
   $AppUserCopyWith<$Res> get user;
 }
 
 /// @nodoc
-class _$CreateUserSuccessfulCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
-    implements $CreateUserSuccessfulCopyWith<$Res> {
-  _$CreateUserSuccessfulCopyWithImpl(CreateUserSuccessful _value, $Res Function(CreateUserSuccessful) _then)
-      : super(_value, (v) => _then(v as CreateUserSuccessful));
+class __$$CreateUserSuccessfulCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
+    implements _$$CreateUserSuccessfulCopyWith<$Res> {
+  __$$CreateUserSuccessfulCopyWithImpl(_$CreateUserSuccessful _value, $Res Function(_$CreateUserSuccessful) _then)
+      : super(_value, (v) => _then(v as _$CreateUserSuccessful));
 
   @override
-  CreateUserSuccessful get _value => super._value as CreateUserSuccessful;
+  _$CreateUserSuccessful get _value => super._value as _$CreateUserSuccessful;
 
   @override
   $Res call({
     Object? user = freezed,
   }) {
-    return _then(CreateUserSuccessful(
+    return _then(_$CreateUserSuccessful(
       user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -299,7 +299,7 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateUserSuccessful &&
+            other is _$CreateUserSuccessful &&
             const DeepCollectionEquality().equals(other.user, user));
   }
 
@@ -308,8 +308,8 @@ class _$CreateUserSuccessful implements CreateUserSuccessful {
 
   @JsonKey(ignore: true)
   @override
-  $CreateUserSuccessfulCopyWith<CreateUserSuccessful> get copyWith =>
-      _$CreateUserSuccessfulCopyWithImpl<CreateUserSuccessful>(this, _$identity);
+  _$$CreateUserSuccessfulCopyWith<_$CreateUserSuccessful> get copyWith =>
+      __$$CreateUserSuccessfulCopyWithImpl<_$CreateUserSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -385,31 +385,31 @@ abstract class CreateUserSuccessful implements CreateUser, UserAction {
 
   AppUser get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserSuccessfulCopyWith<CreateUserSuccessful> get copyWith => throw _privateConstructorUsedError;
+  _$$CreateUserSuccessfulCopyWith<_$CreateUserSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreateUserErrorCopyWith<$Res> {
-  factory $CreateUserErrorCopyWith(CreateUserError value, $Res Function(CreateUserError) then) =
-      _$CreateUserErrorCopyWithImpl<$Res>;
+abstract class _$$CreateUserErrorCopyWith<$Res> {
+  factory _$$CreateUserErrorCopyWith(_$CreateUserError value, $Res Function(_$CreateUserError) then) =
+      __$$CreateUserErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$CreateUserErrorCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
-    implements $CreateUserErrorCopyWith<$Res> {
-  _$CreateUserErrorCopyWithImpl(CreateUserError _value, $Res Function(CreateUserError) _then)
-      : super(_value, (v) => _then(v as CreateUserError));
+class __$$CreateUserErrorCopyWithImpl<$Res> extends _$CreateUserCopyWithImpl<$Res>
+    implements _$$CreateUserErrorCopyWith<$Res> {
+  __$$CreateUserErrorCopyWithImpl(_$CreateUserError _value, $Res Function(_$CreateUserError) _then)
+      : super(_value, (v) => _then(v as _$CreateUserError));
 
   @override
-  CreateUserError get _value => super._value as CreateUserError;
+  _$CreateUserError get _value => super._value as _$CreateUserError;
 
   @override
   $Res call({
     Object? error = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(CreateUserError(
+    return _then(_$CreateUserError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -441,7 +441,7 @@ class _$CreateUserError implements CreateUserError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is CreateUserError &&
+            other is _$CreateUserError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
@@ -452,8 +452,8 @@ class _$CreateUserError implements CreateUserError {
 
   @JsonKey(ignore: true)
   @override
-  $CreateUserErrorCopyWith<CreateUserError> get copyWith =>
-      _$CreateUserErrorCopyWithImpl<CreateUserError>(this, _$identity);
+  _$$CreateUserErrorCopyWith<_$CreateUserError> get copyWith =>
+      __$$CreateUserErrorCopyWithImpl<_$CreateUserError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -530,7 +530,7 @@ abstract class CreateUserError implements CreateUser, ErrorAction {
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreateUserErrorCopyWith<CreateUserError> get copyWith => throw _privateConstructorUsedError;
+  _$$CreateUserErrorCopyWith<_$CreateUserError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -597,19 +597,19 @@ class _$GetCurrentUserCopyWithImpl<$Res> implements $GetCurrentUserCopyWith<$Res
 }
 
 /// @nodoc
-abstract class $GetCurrentUserStartCopyWith<$Res> {
-  factory $GetCurrentUserStartCopyWith(GetCurrentUserStart value, $Res Function(GetCurrentUserStart) then) =
-      _$GetCurrentUserStartCopyWithImpl<$Res>;
+abstract class _$$GetCurrentUserStartCopyWith<$Res> {
+  factory _$$GetCurrentUserStartCopyWith(_$GetCurrentUserStart value, $Res Function(_$GetCurrentUserStart) then) =
+      __$$GetCurrentUserStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GetCurrentUserStartCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
-    implements $GetCurrentUserStartCopyWith<$Res> {
-  _$GetCurrentUserStartCopyWithImpl(GetCurrentUserStart _value, $Res Function(GetCurrentUserStart) _then)
-      : super(_value, (v) => _then(v as GetCurrentUserStart));
+class __$$GetCurrentUserStartCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
+    implements _$$GetCurrentUserStartCopyWith<$Res> {
+  __$$GetCurrentUserStartCopyWithImpl(_$GetCurrentUserStart _value, $Res Function(_$GetCurrentUserStart) _then)
+      : super(_value, (v) => _then(v as _$GetCurrentUserStart));
 
   @override
-  GetCurrentUserStart get _value => super._value as GetCurrentUserStart;
+  _$GetCurrentUserStart get _value => super._value as _$GetCurrentUserStart;
 }
 
 /// @nodoc
@@ -624,7 +624,7 @@ class _$GetCurrentUserStart implements GetCurrentUserStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is GetCurrentUserStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetCurrentUserStart);
   }
 
   @override
@@ -704,29 +704,30 @@ abstract class GetCurrentUserStart implements GetCurrentUser {
 }
 
 /// @nodoc
-abstract class $GetCurrentUserSuccessfulCopyWith<$Res> {
-  factory $GetCurrentUserSuccessfulCopyWith(
-          GetCurrentUserSuccessful value, $Res Function(GetCurrentUserSuccessful) then) =
-      _$GetCurrentUserSuccessfulCopyWithImpl<$Res>;
+abstract class _$$GetCurrentUserSuccessfulCopyWith<$Res> {
+  factory _$$GetCurrentUserSuccessfulCopyWith(
+          _$GetCurrentUserSuccessful value, $Res Function(_$GetCurrentUserSuccessful) then) =
+      __$$GetCurrentUserSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser? user});
 
   $AppUserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
-class _$GetCurrentUserSuccessfulCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
-    implements $GetCurrentUserSuccessfulCopyWith<$Res> {
-  _$GetCurrentUserSuccessfulCopyWithImpl(GetCurrentUserSuccessful _value, $Res Function(GetCurrentUserSuccessful) _then)
-      : super(_value, (v) => _then(v as GetCurrentUserSuccessful));
+class __$$GetCurrentUserSuccessfulCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
+    implements _$$GetCurrentUserSuccessfulCopyWith<$Res> {
+  __$$GetCurrentUserSuccessfulCopyWithImpl(
+      _$GetCurrentUserSuccessful _value, $Res Function(_$GetCurrentUserSuccessful) _then)
+      : super(_value, (v) => _then(v as _$GetCurrentUserSuccessful));
 
   @override
-  GetCurrentUserSuccessful get _value => super._value as GetCurrentUserSuccessful;
+  _$GetCurrentUserSuccessful get _value => super._value as _$GetCurrentUserSuccessful;
 
   @override
   $Res call({
     Object? user = freezed,
   }) {
-    return _then(GetCurrentUserSuccessful(
+    return _then(_$GetCurrentUserSuccessful(
       user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -763,7 +764,7 @@ class _$GetCurrentUserSuccessful implements GetCurrentUserSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GetCurrentUserSuccessful &&
+            other is _$GetCurrentUserSuccessful &&
             const DeepCollectionEquality().equals(other.user, user));
   }
 
@@ -772,8 +773,8 @@ class _$GetCurrentUserSuccessful implements GetCurrentUserSuccessful {
 
   @JsonKey(ignore: true)
   @override
-  $GetCurrentUserSuccessfulCopyWith<GetCurrentUserSuccessful> get copyWith =>
-      _$GetCurrentUserSuccessfulCopyWithImpl<GetCurrentUserSuccessful>(this, _$identity);
+  _$$GetCurrentUserSuccessfulCopyWith<_$GetCurrentUserSuccessful> get copyWith =>
+      __$$GetCurrentUserSuccessfulCopyWithImpl<_$GetCurrentUserSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -849,31 +850,31 @@ abstract class GetCurrentUserSuccessful implements GetCurrentUser, UserAction {
 
   AppUser? get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetCurrentUserSuccessfulCopyWith<GetCurrentUserSuccessful> get copyWith => throw _privateConstructorUsedError;
+  _$$GetCurrentUserSuccessfulCopyWith<_$GetCurrentUserSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetCurrentUserErrorCopyWith<$Res> {
-  factory $GetCurrentUserErrorCopyWith(GetCurrentUserError value, $Res Function(GetCurrentUserError) then) =
-      _$GetCurrentUserErrorCopyWithImpl<$Res>;
+abstract class _$$GetCurrentUserErrorCopyWith<$Res> {
+  factory _$$GetCurrentUserErrorCopyWith(_$GetCurrentUserError value, $Res Function(_$GetCurrentUserError) then) =
+      __$$GetCurrentUserErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$GetCurrentUserErrorCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
-    implements $GetCurrentUserErrorCopyWith<$Res> {
-  _$GetCurrentUserErrorCopyWithImpl(GetCurrentUserError _value, $Res Function(GetCurrentUserError) _then)
-      : super(_value, (v) => _then(v as GetCurrentUserError));
+class __$$GetCurrentUserErrorCopyWithImpl<$Res> extends _$GetCurrentUserCopyWithImpl<$Res>
+    implements _$$GetCurrentUserErrorCopyWith<$Res> {
+  __$$GetCurrentUserErrorCopyWithImpl(_$GetCurrentUserError _value, $Res Function(_$GetCurrentUserError) _then)
+      : super(_value, (v) => _then(v as _$GetCurrentUserError));
 
   @override
-  GetCurrentUserError get _value => super._value as GetCurrentUserError;
+  _$GetCurrentUserError get _value => super._value as _$GetCurrentUserError;
 
   @override
   $Res call({
     Object? error = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(GetCurrentUserError(
+    return _then(_$GetCurrentUserError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -905,7 +906,7 @@ class _$GetCurrentUserError implements GetCurrentUserError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GetCurrentUserError &&
+            other is _$GetCurrentUserError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
@@ -916,8 +917,8 @@ class _$GetCurrentUserError implements GetCurrentUserError {
 
   @JsonKey(ignore: true)
   @override
-  $GetCurrentUserErrorCopyWith<GetCurrentUserError> get copyWith =>
-      _$GetCurrentUserErrorCopyWithImpl<GetCurrentUserError>(this, _$identity);
+  _$$GetCurrentUserErrorCopyWith<_$GetCurrentUserError> get copyWith =>
+      __$$GetCurrentUserErrorCopyWithImpl<_$GetCurrentUserError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -994,7 +995,7 @@ abstract class GetCurrentUserError implements GetCurrentUser, ErrorAction {
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetCurrentUserErrorCopyWith<GetCurrentUserError> get copyWith => throw _privateConstructorUsedError;
+  _$$GetCurrentUserErrorCopyWith<_$GetCurrentUserError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1060,26 +1061,26 @@ class _$GetMoviesCopyWithImpl<$Res> implements $GetMoviesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $GetMoviesStartCopyWith<$Res> {
-  factory $GetMoviesStartCopyWith(GetMoviesStart value, $Res Function(GetMoviesStart) then) =
-      _$GetMoviesStartCopyWithImpl<$Res>;
+abstract class _$$GetMoviesStartCopyWith<$Res> {
+  factory _$$GetMoviesStartCopyWith(_$GetMoviesStart value, $Res Function(_$GetMoviesStart) then) =
+      __$$GetMoviesStartCopyWithImpl<$Res>;
   $Res call({ActionResult onResult});
 }
 
 /// @nodoc
-class _$GetMoviesStartCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
-    implements $GetMoviesStartCopyWith<$Res> {
-  _$GetMoviesStartCopyWithImpl(GetMoviesStart _value, $Res Function(GetMoviesStart) _then)
-      : super(_value, (v) => _then(v as GetMoviesStart));
+class __$$GetMoviesStartCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
+    implements _$$GetMoviesStartCopyWith<$Res> {
+  __$$GetMoviesStartCopyWithImpl(_$GetMoviesStart _value, $Res Function(_$GetMoviesStart) _then)
+      : super(_value, (v) => _then(v as _$GetMoviesStart));
 
   @override
-  GetMoviesStart get _value => super._value as GetMoviesStart;
+  _$GetMoviesStart get _value => super._value as _$GetMoviesStart;
 
   @override
   $Res call({
     Object? onResult = freezed,
   }) {
-    return _then(GetMoviesStart(
+    return _then(_$GetMoviesStart(
       onResult == freezed
           ? _value.onResult
           : onResult // ignore: cast_nullable_to_non_nullable
@@ -1105,7 +1106,7 @@ class _$GetMoviesStart implements GetMoviesStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GetMoviesStart &&
+            other is _$GetMoviesStart &&
             (identical(other.onResult, onResult) || other.onResult == onResult));
   }
 
@@ -1114,8 +1115,8 @@ class _$GetMoviesStart implements GetMoviesStart {
 
   @JsonKey(ignore: true)
   @override
-  $GetMoviesStartCopyWith<GetMoviesStart> get copyWith =>
-      _$GetMoviesStartCopyWithImpl<GetMoviesStart>(this, _$identity);
+  _$$GetMoviesStartCopyWith<_$GetMoviesStart> get copyWith =>
+      __$$GetMoviesStartCopyWithImpl<_$GetMoviesStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1191,32 +1192,32 @@ abstract class GetMoviesStart implements GetMovies {
 
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesStartCopyWith<GetMoviesStart> get copyWith => throw _privateConstructorUsedError;
+  _$$GetMoviesStartCopyWith<_$GetMoviesStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetMoviesSuccessfulCopyWith<$Res> {
-  factory $GetMoviesSuccessfulCopyWith(GetMoviesSuccessful value, $Res Function(GetMoviesSuccessful) then) =
-      _$GetMoviesSuccessfulCopyWithImpl<$Res>;
+abstract class _$$GetMoviesSuccessfulCopyWith<$Res> {
+  factory _$$GetMoviesSuccessfulCopyWith(_$GetMoviesSuccessful value, $Res Function(_$GetMoviesSuccessful) then) =
+      __$$GetMoviesSuccessfulCopyWithImpl<$Res>;
   $Res call({List<Movie> movies});
 }
 
 /// @nodoc
-class _$GetMoviesSuccessfulCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
-    implements $GetMoviesSuccessfulCopyWith<$Res> {
-  _$GetMoviesSuccessfulCopyWithImpl(GetMoviesSuccessful _value, $Res Function(GetMoviesSuccessful) _then)
-      : super(_value, (v) => _then(v as GetMoviesSuccessful));
+class __$$GetMoviesSuccessfulCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
+    implements _$$GetMoviesSuccessfulCopyWith<$Res> {
+  __$$GetMoviesSuccessfulCopyWithImpl(_$GetMoviesSuccessful _value, $Res Function(_$GetMoviesSuccessful) _then)
+      : super(_value, (v) => _then(v as _$GetMoviesSuccessful));
 
   @override
-  GetMoviesSuccessful get _value => super._value as GetMoviesSuccessful;
+  _$GetMoviesSuccessful get _value => super._value as _$GetMoviesSuccessful;
 
   @override
   $Res call({
     Object? movies = freezed,
   }) {
-    return _then(GetMoviesSuccessful(
+    return _then(_$GetMoviesSuccessful(
       movies == freezed
-          ? _value.movies
+          ? _value._movies
           : movies // ignore: cast_nullable_to_non_nullable
               as List<Movie>,
     ));
@@ -1244,17 +1245,17 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GetMoviesSuccessful &&
-            const DeepCollectionEquality().equals(other.movies, movies));
+            other is _$GetMoviesSuccessful &&
+            const DeepCollectionEquality().equals(other._movies, _movies));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movies));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_movies));
 
   @JsonKey(ignore: true)
   @override
-  $GetMoviesSuccessfulCopyWith<GetMoviesSuccessful> get copyWith =>
-      _$GetMoviesSuccessfulCopyWithImpl<GetMoviesSuccessful>(this, _$identity);
+  _$$GetMoviesSuccessfulCopyWith<_$GetMoviesSuccessful> get copyWith =>
+      __$$GetMoviesSuccessfulCopyWithImpl<_$GetMoviesSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1330,31 +1331,31 @@ abstract class GetMoviesSuccessful implements GetMovies {
 
   List<Movie> get movies => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesSuccessfulCopyWith<GetMoviesSuccessful> get copyWith => throw _privateConstructorUsedError;
+  _$$GetMoviesSuccessfulCopyWith<_$GetMoviesSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetMoviesErrorCopyWith<$Res> {
-  factory $GetMoviesErrorCopyWith(GetMoviesError value, $Res Function(GetMoviesError) then) =
-      _$GetMoviesErrorCopyWithImpl<$Res>;
+abstract class _$$GetMoviesErrorCopyWith<$Res> {
+  factory _$$GetMoviesErrorCopyWith(_$GetMoviesError value, $Res Function(_$GetMoviesError) then) =
+      __$$GetMoviesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$GetMoviesErrorCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
-    implements $GetMoviesErrorCopyWith<$Res> {
-  _$GetMoviesErrorCopyWithImpl(GetMoviesError _value, $Res Function(GetMoviesError) _then)
-      : super(_value, (v) => _then(v as GetMoviesError));
+class __$$GetMoviesErrorCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
+    implements _$$GetMoviesErrorCopyWith<$Res> {
+  __$$GetMoviesErrorCopyWithImpl(_$GetMoviesError _value, $Res Function(_$GetMoviesError) _then)
+      : super(_value, (v) => _then(v as _$GetMoviesError));
 
   @override
-  GetMoviesError get _value => super._value as GetMoviesError;
+  _$GetMoviesError get _value => super._value as _$GetMoviesError;
 
   @override
   $Res call({
     Object? error = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(GetMoviesError(
+    return _then(_$GetMoviesError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -1386,7 +1387,7 @@ class _$GetMoviesError implements GetMoviesError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is GetMoviesError &&
+            other is _$GetMoviesError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
@@ -1397,8 +1398,8 @@ class _$GetMoviesError implements GetMoviesError {
 
   @JsonKey(ignore: true)
   @override
-  $GetMoviesErrorCopyWith<GetMoviesError> get copyWith =>
-      _$GetMoviesErrorCopyWithImpl<GetMoviesError>(this, _$identity);
+  _$$GetMoviesErrorCopyWith<_$GetMoviesError> get copyWith =>
+      __$$GetMoviesErrorCopyWithImpl<_$GetMoviesError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1475,7 +1476,7 @@ abstract class GetMoviesError implements GetMovies, ErrorAction {
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetMoviesErrorCopyWith<GetMoviesError> get copyWith => throw _privateConstructorUsedError;
+  _$$GetMoviesErrorCopyWith<_$GetMoviesError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1541,18 +1542,19 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $LoginStartCopyWith<$Res> {
-  factory $LoginStartCopyWith(LoginStart value, $Res Function(LoginStart) then) = _$LoginStartCopyWithImpl<$Res>;
+abstract class _$$LoginStartCopyWith<$Res> {
+  factory _$$LoginStartCopyWith(_$LoginStart value, $Res Function(_$LoginStart) then) =
+      __$$LoginStartCopyWithImpl<$Res>;
   $Res call({String email, String password, ActionResult onResult});
 }
 
 /// @nodoc
-class _$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginStartCopyWith<$Res> {
-  _$LoginStartCopyWithImpl(LoginStart _value, $Res Function(LoginStart) _then)
-      : super(_value, (v) => _then(v as LoginStart));
+class __$$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements _$$LoginStartCopyWith<$Res> {
+  __$$LoginStartCopyWithImpl(_$LoginStart _value, $Res Function(_$LoginStart) _then)
+      : super(_value, (v) => _then(v as _$LoginStart));
 
   @override
-  LoginStart get _value => super._value as LoginStart;
+  _$LoginStart get _value => super._value as _$LoginStart;
 
   @override
   $Res call({
@@ -1560,7 +1562,7 @@ class _$LoginStartCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implement
     Object? password = freezed,
     Object? onResult = freezed,
   }) {
-    return _then(LoginStart(
+    return _then(_$LoginStart(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -1598,7 +1600,7 @@ class _$LoginStart implements LoginStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoginStart &&
+            other is _$LoginStart &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             (identical(other.onResult, onResult) || other.onResult == onResult));
@@ -1610,7 +1612,7 @@ class _$LoginStart implements LoginStart {
 
   @JsonKey(ignore: true)
   @override
-  $LoginStartCopyWith<LoginStart> get copyWith => _$LoginStartCopyWithImpl<LoginStart>(this, _$identity);
+  _$$LoginStartCopyWith<_$LoginStart> get copyWith => __$$LoginStartCopyWithImpl<_$LoginStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1691,31 +1693,32 @@ abstract class LoginStart implements Login {
   String get password => throw _privateConstructorUsedError;
   ActionResult get onResult => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginStartCopyWith<LoginStart> get copyWith => throw _privateConstructorUsedError;
+  _$$LoginStartCopyWith<_$LoginStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginSuccessfulCopyWith<$Res> {
-  factory $LoginSuccessfulCopyWith(LoginSuccessful value, $Res Function(LoginSuccessful) then) =
-      _$LoginSuccessfulCopyWithImpl<$Res>;
+abstract class _$$LoginSuccessfulCopyWith<$Res> {
+  factory _$$LoginSuccessfulCopyWith(_$LoginSuccessful value, $Res Function(_$LoginSuccessful) then) =
+      __$$LoginSuccessfulCopyWithImpl<$Res>;
   $Res call({AppUser user});
 
   $AppUserCopyWith<$Res> get user;
 }
 
 /// @nodoc
-class _$LoginSuccessfulCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginSuccessfulCopyWith<$Res> {
-  _$LoginSuccessfulCopyWithImpl(LoginSuccessful _value, $Res Function(LoginSuccessful) _then)
-      : super(_value, (v) => _then(v as LoginSuccessful));
+class __$$LoginSuccessfulCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
+    implements _$$LoginSuccessfulCopyWith<$Res> {
+  __$$LoginSuccessfulCopyWithImpl(_$LoginSuccessful _value, $Res Function(_$LoginSuccessful) _then)
+      : super(_value, (v) => _then(v as _$LoginSuccessful));
 
   @override
-  LoginSuccessful get _value => super._value as LoginSuccessful;
+  _$LoginSuccessful get _value => super._value as _$LoginSuccessful;
 
   @override
   $Res call({
     Object? user = freezed,
   }) {
-    return _then(LoginSuccessful(
+    return _then(_$LoginSuccessful(
       user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -1748,7 +1751,7 @@ class _$LoginSuccessful implements LoginSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoginSuccessful &&
+            other is _$LoginSuccessful &&
             const DeepCollectionEquality().equals(other.user, user));
   }
 
@@ -1757,8 +1760,8 @@ class _$LoginSuccessful implements LoginSuccessful {
 
   @JsonKey(ignore: true)
   @override
-  $LoginSuccessfulCopyWith<LoginSuccessful> get copyWith =>
-      _$LoginSuccessfulCopyWithImpl<LoginSuccessful>(this, _$identity);
+  _$$LoginSuccessfulCopyWith<_$LoginSuccessful> get copyWith =>
+      __$$LoginSuccessfulCopyWithImpl<_$LoginSuccessful>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1834,29 +1837,30 @@ abstract class LoginSuccessful implements Login, UserAction {
 
   AppUser get user => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginSuccessfulCopyWith<LoginSuccessful> get copyWith => throw _privateConstructorUsedError;
+  _$$LoginSuccessfulCopyWith<_$LoginSuccessful> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginErrorCopyWith<$Res> {
-  factory $LoginErrorCopyWith(LoginError value, $Res Function(LoginError) then) = _$LoginErrorCopyWithImpl<$Res>;
+abstract class _$$LoginErrorCopyWith<$Res> {
+  factory _$$LoginErrorCopyWith(_$LoginError value, $Res Function(_$LoginError) then) =
+      __$$LoginErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$LoginErrorCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements $LoginErrorCopyWith<$Res> {
-  _$LoginErrorCopyWithImpl(LoginError _value, $Res Function(LoginError) _then)
-      : super(_value, (v) => _then(v as LoginError));
+class __$$LoginErrorCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res> implements _$$LoginErrorCopyWith<$Res> {
+  __$$LoginErrorCopyWithImpl(_$LoginError _value, $Res Function(_$LoginError) _then)
+      : super(_value, (v) => _then(v as _$LoginError));
 
   @override
-  LoginError get _value => super._value as LoginError;
+  _$LoginError get _value => super._value as _$LoginError;
 
   @override
   $Res call({
     Object? error = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(LoginError(
+    return _then(_$LoginError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -1888,7 +1892,7 @@ class _$LoginError implements LoginError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoginError &&
+            other is _$LoginError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
@@ -1899,7 +1903,7 @@ class _$LoginError implements LoginError {
 
   @JsonKey(ignore: true)
   @override
-  $LoginErrorCopyWith<LoginError> get copyWith => _$LoginErrorCopyWithImpl<LoginError>(this, _$identity);
+  _$$LoginErrorCopyWith<_$LoginError> get copyWith => __$$LoginErrorCopyWithImpl<_$LoginError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1976,7 +1980,7 @@ abstract class LoginError implements Login, ErrorAction {
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginErrorCopyWith<LoginError> get copyWith => throw _privateConstructorUsedError;
+  _$$LoginErrorCopyWith<_$LoginError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2043,27 +2047,27 @@ class _$UpdateFavoritesCopyWithImpl<$Res> implements $UpdateFavoritesCopyWith<$R
 }
 
 /// @nodoc
-abstract class $UpdateFavoritesStartCopyWith<$Res> {
-  factory $UpdateFavoritesStartCopyWith(UpdateFavoritesStart value, $Res Function(UpdateFavoritesStart) then) =
-      _$UpdateFavoritesStartCopyWithImpl<$Res>;
+abstract class _$$UpdateFavoritesStartCopyWith<$Res> {
+  factory _$$UpdateFavoritesStartCopyWith(_$UpdateFavoritesStart value, $Res Function(_$UpdateFavoritesStart) then) =
+      __$$UpdateFavoritesStartCopyWithImpl<$Res>;
   $Res call({int id, bool add});
 }
 
 /// @nodoc
-class _$UpdateFavoritesStartCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
-    implements $UpdateFavoritesStartCopyWith<$Res> {
-  _$UpdateFavoritesStartCopyWithImpl(UpdateFavoritesStart _value, $Res Function(UpdateFavoritesStart) _then)
-      : super(_value, (v) => _then(v as UpdateFavoritesStart));
+class __$$UpdateFavoritesStartCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
+    implements _$$UpdateFavoritesStartCopyWith<$Res> {
+  __$$UpdateFavoritesStartCopyWithImpl(_$UpdateFavoritesStart _value, $Res Function(_$UpdateFavoritesStart) _then)
+      : super(_value, (v) => _then(v as _$UpdateFavoritesStart));
 
   @override
-  UpdateFavoritesStart get _value => super._value as UpdateFavoritesStart;
+  _$UpdateFavoritesStart get _value => super._value as _$UpdateFavoritesStart;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? add = freezed,
   }) {
-    return _then(UpdateFavoritesStart(
+    return _then(_$UpdateFavoritesStart(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2095,7 +2099,7 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UpdateFavoritesStart &&
+            other is _$UpdateFavoritesStart &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.add, add));
   }
@@ -2106,8 +2110,8 @@ class _$UpdateFavoritesStart implements UpdateFavoritesStart {
 
   @JsonKey(ignore: true)
   @override
-  $UpdateFavoritesStartCopyWith<UpdateFavoritesStart> get copyWith =>
-      _$UpdateFavoritesStartCopyWithImpl<UpdateFavoritesStart>(this, _$identity);
+  _$$UpdateFavoritesStartCopyWith<_$UpdateFavoritesStart> get copyWith =>
+      __$$UpdateFavoritesStartCopyWithImpl<_$UpdateFavoritesStart>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2184,25 +2188,25 @@ abstract class UpdateFavoritesStart implements UpdateFavorites {
   int get id => throw _privateConstructorUsedError;
   bool get add => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateFavoritesStartCopyWith<UpdateFavoritesStart> get copyWith => throw _privateConstructorUsedError;
+  _$$UpdateFavoritesStartCopyWith<_$UpdateFavoritesStart> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UpdateFavoritesSuccessfulCopyWith<$Res> {
-  factory $UpdateFavoritesSuccessfulCopyWith(
-          UpdateFavoritesSuccessful value, $Res Function(UpdateFavoritesSuccessful) then) =
-      _$UpdateFavoritesSuccessfulCopyWithImpl<$Res>;
+abstract class _$$UpdateFavoritesSuccessfulCopyWith<$Res> {
+  factory _$$UpdateFavoritesSuccessfulCopyWith(
+          _$UpdateFavoritesSuccessful value, $Res Function(_$UpdateFavoritesSuccessful) then) =
+      __$$UpdateFavoritesSuccessfulCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UpdateFavoritesSuccessfulCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
-    implements $UpdateFavoritesSuccessfulCopyWith<$Res> {
-  _$UpdateFavoritesSuccessfulCopyWithImpl(
-      UpdateFavoritesSuccessful _value, $Res Function(UpdateFavoritesSuccessful) _then)
-      : super(_value, (v) => _then(v as UpdateFavoritesSuccessful));
+class __$$UpdateFavoritesSuccessfulCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
+    implements _$$UpdateFavoritesSuccessfulCopyWith<$Res> {
+  __$$UpdateFavoritesSuccessfulCopyWithImpl(
+      _$UpdateFavoritesSuccessful _value, $Res Function(_$UpdateFavoritesSuccessful) _then)
+      : super(_value, (v) => _then(v as _$UpdateFavoritesSuccessful));
 
   @override
-  UpdateFavoritesSuccessful get _value => super._value as UpdateFavoritesSuccessful;
+  _$UpdateFavoritesSuccessful get _value => super._value as _$UpdateFavoritesSuccessful;
 }
 
 /// @nodoc
@@ -2217,7 +2221,7 @@ class _$UpdateFavoritesSuccessful implements UpdateFavoritesSuccessful {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is UpdateFavoritesSuccessful);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$UpdateFavoritesSuccessful);
   }
 
   @override
@@ -2297,20 +2301,20 @@ abstract class UpdateFavoritesSuccessful implements UpdateFavorites {
 }
 
 /// @nodoc
-abstract class $UpdateFavoritesErrorCopyWith<$Res> {
-  factory $UpdateFavoritesErrorCopyWith(UpdateFavoritesError value, $Res Function(UpdateFavoritesError) then) =
-      _$UpdateFavoritesErrorCopyWithImpl<$Res>;
+abstract class _$$UpdateFavoritesErrorCopyWith<$Res> {
+  factory _$$UpdateFavoritesErrorCopyWith(_$UpdateFavoritesError value, $Res Function(_$UpdateFavoritesError) then) =
+      __$$UpdateFavoritesErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace, int id, bool add});
 }
 
 /// @nodoc
-class _$UpdateFavoritesErrorCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
-    implements $UpdateFavoritesErrorCopyWith<$Res> {
-  _$UpdateFavoritesErrorCopyWithImpl(UpdateFavoritesError _value, $Res Function(UpdateFavoritesError) _then)
-      : super(_value, (v) => _then(v as UpdateFavoritesError));
+class __$$UpdateFavoritesErrorCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWithImpl<$Res>
+    implements _$$UpdateFavoritesErrorCopyWith<$Res> {
+  __$$UpdateFavoritesErrorCopyWithImpl(_$UpdateFavoritesError _value, $Res Function(_$UpdateFavoritesError) _then)
+      : super(_value, (v) => _then(v as _$UpdateFavoritesError));
 
   @override
-  UpdateFavoritesError get _value => super._value as UpdateFavoritesError;
+  _$UpdateFavoritesError get _value => super._value as _$UpdateFavoritesError;
 
   @override
   $Res call({
@@ -2319,7 +2323,7 @@ class _$UpdateFavoritesErrorCopyWithImpl<$Res> extends _$UpdateFavoritesCopyWith
     Object? id = freezed,
     Object? add = freezed,
   }) {
-    return _then(UpdateFavoritesError(
+    return _then(_$UpdateFavoritesError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -2363,7 +2367,7 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UpdateFavoritesError &&
+            other is _$UpdateFavoritesError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace) &&
             const DeepCollectionEquality().equals(other.id, id) &&
@@ -2380,8 +2384,8 @@ class _$UpdateFavoritesError implements UpdateFavoritesError {
 
   @JsonKey(ignore: true)
   @override
-  $UpdateFavoritesErrorCopyWith<UpdateFavoritesError> get copyWith =>
-      _$UpdateFavoritesErrorCopyWithImpl<UpdateFavoritesError>(this, _$identity);
+  _$$UpdateFavoritesErrorCopyWith<_$UpdateFavoritesError> get copyWith =>
+      __$$UpdateFavoritesErrorCopyWithImpl<_$UpdateFavoritesError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2461,7 +2465,7 @@ abstract class UpdateFavoritesError implements UpdateFavorites, ErrorAction {
   int get id => throw _privateConstructorUsedError;
   bool get add => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UpdateFavoritesErrorCopyWith<UpdateFavoritesError> get copyWith => throw _privateConstructorUsedError;
+  _$$UpdateFavoritesErrorCopyWith<_$UpdateFavoritesError> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2527,17 +2531,18 @@ class _$LogoutCopyWithImpl<$Res> implements $LogoutCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $LogoutStartCopyWith<$Res> {
-  factory $LogoutStartCopyWith(LogoutStart value, $Res Function(LogoutStart) then) = _$LogoutStartCopyWithImpl<$Res>;
+abstract class _$$LogoutStartCopyWith<$Res> {
+  factory _$$LogoutStartCopyWith(_$LogoutStart value, $Res Function(_$LogoutStart) then) =
+      __$$LogoutStartCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LogoutStartCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements $LogoutStartCopyWith<$Res> {
-  _$LogoutStartCopyWithImpl(LogoutStart _value, $Res Function(LogoutStart) _then)
-      : super(_value, (v) => _then(v as LogoutStart));
+class __$$LogoutStartCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements _$$LogoutStartCopyWith<$Res> {
+  __$$LogoutStartCopyWithImpl(_$LogoutStart _value, $Res Function(_$LogoutStart) _then)
+      : super(_value, (v) => _then(v as _$LogoutStart));
 
   @override
-  LogoutStart get _value => super._value as LogoutStart;
+  _$LogoutStart get _value => super._value as _$LogoutStart;
 }
 
 /// @nodoc
@@ -2552,7 +2557,7 @@ class _$LogoutStart implements LogoutStart {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is LogoutStart);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LogoutStart);
   }
 
   @override
@@ -2632,19 +2637,19 @@ abstract class LogoutStart implements Logout {
 }
 
 /// @nodoc
-abstract class $LogoutSuccessfulCopyWith<$Res> {
-  factory $LogoutSuccessfulCopyWith(LogoutSuccessful value, $Res Function(LogoutSuccessful) then) =
-      _$LogoutSuccessfulCopyWithImpl<$Res>;
+abstract class _$$LogoutSuccessfulCopyWith<$Res> {
+  factory _$$LogoutSuccessfulCopyWith(_$LogoutSuccessful value, $Res Function(_$LogoutSuccessful) then) =
+      __$$LogoutSuccessfulCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LogoutSuccessfulCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res>
-    implements $LogoutSuccessfulCopyWith<$Res> {
-  _$LogoutSuccessfulCopyWithImpl(LogoutSuccessful _value, $Res Function(LogoutSuccessful) _then)
-      : super(_value, (v) => _then(v as LogoutSuccessful));
+class __$$LogoutSuccessfulCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res>
+    implements _$$LogoutSuccessfulCopyWith<$Res> {
+  __$$LogoutSuccessfulCopyWithImpl(_$LogoutSuccessful _value, $Res Function(_$LogoutSuccessful) _then)
+      : super(_value, (v) => _then(v as _$LogoutSuccessful));
 
   @override
-  LogoutSuccessful get _value => super._value as LogoutSuccessful;
+  _$LogoutSuccessful get _value => super._value as _$LogoutSuccessful;
 }
 
 /// @nodoc
@@ -2659,7 +2664,7 @@ class _$LogoutSuccessful implements LogoutSuccessful {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is LogoutSuccessful);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LogoutSuccessful);
   }
 
   @override
@@ -2739,25 +2744,26 @@ abstract class LogoutSuccessful implements Logout {
 }
 
 /// @nodoc
-abstract class $LogoutErrorCopyWith<$Res> {
-  factory $LogoutErrorCopyWith(LogoutError value, $Res Function(LogoutError) then) = _$LogoutErrorCopyWithImpl<$Res>;
+abstract class _$$LogoutErrorCopyWith<$Res> {
+  factory _$$LogoutErrorCopyWith(_$LogoutError value, $Res Function(_$LogoutError) then) =
+      __$$LogoutErrorCopyWithImpl<$Res>;
   $Res call({Object error, StackTrace stackTrace});
 }
 
 /// @nodoc
-class _$LogoutErrorCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements $LogoutErrorCopyWith<$Res> {
-  _$LogoutErrorCopyWithImpl(LogoutError _value, $Res Function(LogoutError) _then)
-      : super(_value, (v) => _then(v as LogoutError));
+class __$$LogoutErrorCopyWithImpl<$Res> extends _$LogoutCopyWithImpl<$Res> implements _$$LogoutErrorCopyWith<$Res> {
+  __$$LogoutErrorCopyWithImpl(_$LogoutError _value, $Res Function(_$LogoutError) _then)
+      : super(_value, (v) => _then(v as _$LogoutError));
 
   @override
-  LogoutError get _value => super._value as LogoutError;
+  _$LogoutError get _value => super._value as _$LogoutError;
 
   @override
   $Res call({
     Object? error = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(LogoutError(
+    return _then(_$LogoutError(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -2789,7 +2795,7 @@ class _$LogoutError implements LogoutError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LogoutError &&
+            other is _$LogoutError &&
             const DeepCollectionEquality().equals(other.error, error) &&
             const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
   }
@@ -2800,7 +2806,7 @@ class _$LogoutError implements LogoutError {
 
   @JsonKey(ignore: true)
   @override
-  $LogoutErrorCopyWith<LogoutError> get copyWith => _$LogoutErrorCopyWithImpl<LogoutError>(this, _$identity);
+  _$$LogoutErrorCopyWith<_$LogoutError> get copyWith => __$$LogoutErrorCopyWithImpl<_$LogoutError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2877,5 +2883,1774 @@ abstract class LogoutError implements Logout, ErrorAction {
   Object get error => throw _privateConstructorUsedError;
   StackTrace get stackTrace => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LogoutErrorCopyWith<LogoutError> get copyWith => throw _privateConstructorUsedError;
+  _$$LogoutErrorCopyWith<_$LogoutError> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$ListenForComments {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int movieId) start,
+    required TResult Function(int movieId) done,
+    required TResult Function(List<Comment> comments) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForCommentsStart value) start,
+    required TResult Function(ListenForCommentsDone value) done,
+    required TResult Function(OnCommentsEvent value) event,
+    required TResult Function(_ListenForCommentsError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListenForCommentsCopyWith<$Res> {
+  factory $ListenForCommentsCopyWith(ListenForComments value, $Res Function(ListenForComments) then) =
+      _$ListenForCommentsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ListenForCommentsCopyWithImpl<$Res> implements $ListenForCommentsCopyWith<$Res> {
+  _$ListenForCommentsCopyWithImpl(this._value, this._then);
+
+  final ListenForComments _value;
+  // ignore: unused_field
+  final $Res Function(ListenForComments) _then;
+}
+
+/// @nodoc
+abstract class _$$ListenForCommentsStartCopyWith<$Res> {
+  factory _$$ListenForCommentsStartCopyWith(
+          _$ListenForCommentsStart value, $Res Function(_$ListenForCommentsStart) then) =
+      __$$ListenForCommentsStartCopyWithImpl<$Res>;
+  $Res call({int movieId});
+}
+
+/// @nodoc
+class __$$ListenForCommentsStartCopyWithImpl<$Res> extends _$ListenForCommentsCopyWithImpl<$Res>
+    implements _$$ListenForCommentsStartCopyWith<$Res> {
+  __$$ListenForCommentsStartCopyWithImpl(_$ListenForCommentsStart _value, $Res Function(_$ListenForCommentsStart) _then)
+      : super(_value, (v) => _then(v as _$ListenForCommentsStart));
+
+  @override
+  _$ListenForCommentsStart get _value => super._value as _$ListenForCommentsStart;
+
+  @override
+  $Res call({
+    Object? movieId = freezed,
+  }) {
+    return _then(_$ListenForCommentsStart(
+      movieId == freezed
+          ? _value.movieId
+          : movieId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ListenForCommentsStart implements ListenForCommentsStart {
+  const _$ListenForCommentsStart(this.movieId);
+
+  @override
+  final int movieId;
+
+  @override
+  String toString() {
+    return 'ListenForComments.start(movieId: $movieId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListenForCommentsStart &&
+            const DeepCollectionEquality().equals(other.movieId, movieId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movieId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$ListenForCommentsStartCopyWith<_$ListenForCommentsStart> get copyWith =>
+      __$$ListenForCommentsStartCopyWithImpl<_$ListenForCommentsStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int movieId) start,
+    required TResult Function(int movieId) done,
+    required TResult Function(List<Comment> comments) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return start(movieId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return start?.call(movieId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(movieId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForCommentsStart value) start,
+    required TResult Function(ListenForCommentsDone value) done,
+    required TResult Function(OnCommentsEvent value) event,
+    required TResult Function(_ListenForCommentsError value) error,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForCommentsStart implements ListenForComments {
+  const factory ListenForCommentsStart(final int movieId) = _$ListenForCommentsStart;
+
+  int get movieId => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$ListenForCommentsStartCopyWith<_$ListenForCommentsStart> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ListenForCommentsDoneCopyWith<$Res> {
+  factory _$$ListenForCommentsDoneCopyWith(_$ListenForCommentsDone value, $Res Function(_$ListenForCommentsDone) then) =
+      __$$ListenForCommentsDoneCopyWithImpl<$Res>;
+  $Res call({int movieId});
+}
+
+/// @nodoc
+class __$$ListenForCommentsDoneCopyWithImpl<$Res> extends _$ListenForCommentsCopyWithImpl<$Res>
+    implements _$$ListenForCommentsDoneCopyWith<$Res> {
+  __$$ListenForCommentsDoneCopyWithImpl(_$ListenForCommentsDone _value, $Res Function(_$ListenForCommentsDone) _then)
+      : super(_value, (v) => _then(v as _$ListenForCommentsDone));
+
+  @override
+  _$ListenForCommentsDone get _value => super._value as _$ListenForCommentsDone;
+
+  @override
+  $Res call({
+    Object? movieId = freezed,
+  }) {
+    return _then(_$ListenForCommentsDone(
+      movieId == freezed
+          ? _value.movieId
+          : movieId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ListenForCommentsDone implements ListenForCommentsDone {
+  const _$ListenForCommentsDone(this.movieId);
+
+  @override
+  final int movieId;
+
+  @override
+  String toString() {
+    return 'ListenForComments.done(movieId: $movieId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ListenForCommentsDone &&
+            const DeepCollectionEquality().equals(other.movieId, movieId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movieId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$ListenForCommentsDoneCopyWith<_$ListenForCommentsDone> get copyWith =>
+      __$$ListenForCommentsDoneCopyWithImpl<_$ListenForCommentsDone>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int movieId) start,
+    required TResult Function(int movieId) done,
+    required TResult Function(List<Comment> comments) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return done(movieId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return done?.call(movieId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done(movieId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForCommentsStart value) start,
+    required TResult Function(ListenForCommentsDone value) done,
+    required TResult Function(OnCommentsEvent value) event,
+    required TResult Function(_ListenForCommentsError value) error,
+  }) {
+    return done(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+  }) {
+    return done?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (done != null) {
+      return done(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ListenForCommentsDone implements ListenForComments {
+  const factory ListenForCommentsDone(final int movieId) = _$ListenForCommentsDone;
+
+  int get movieId => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$ListenForCommentsDoneCopyWith<_$ListenForCommentsDone> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnCommentsEventCopyWith<$Res> {
+  factory _$$OnCommentsEventCopyWith(_$OnCommentsEvent value, $Res Function(_$OnCommentsEvent) then) =
+      __$$OnCommentsEventCopyWithImpl<$Res>;
+  $Res call({List<Comment> comments});
+}
+
+/// @nodoc
+class __$$OnCommentsEventCopyWithImpl<$Res> extends _$ListenForCommentsCopyWithImpl<$Res>
+    implements _$$OnCommentsEventCopyWith<$Res> {
+  __$$OnCommentsEventCopyWithImpl(_$OnCommentsEvent _value, $Res Function(_$OnCommentsEvent) _then)
+      : super(_value, (v) => _then(v as _$OnCommentsEvent));
+
+  @override
+  _$OnCommentsEvent get _value => super._value as _$OnCommentsEvent;
+
+  @override
+  $Res call({
+    Object? comments = freezed,
+  }) {
+    return _then(_$OnCommentsEvent(
+      comments == freezed
+          ? _value._comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as List<Comment>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$OnCommentsEvent implements OnCommentsEvent {
+  const _$OnCommentsEvent(final List<Comment> comments) : _comments = comments;
+
+  final List<Comment> _comments;
+  @override
+  List<Comment> get comments {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_comments);
+  }
+
+  @override
+  String toString() {
+    return 'ListenForComments.event(comments: $comments)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnCommentsEvent &&
+            const DeepCollectionEquality().equals(other._comments, _comments));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_comments));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$OnCommentsEventCopyWith<_$OnCommentsEvent> get copyWith =>
+      __$$OnCommentsEventCopyWithImpl<_$OnCommentsEvent>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int movieId) start,
+    required TResult Function(int movieId) done,
+    required TResult Function(List<Comment> comments) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return event(comments);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return event?.call(comments);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(comments);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForCommentsStart value) start,
+    required TResult Function(ListenForCommentsDone value) done,
+    required TResult Function(OnCommentsEvent value) event,
+    required TResult Function(_ListenForCommentsError value) error,
+  }) {
+    return event(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+  }) {
+    return event?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (event != null) {
+      return event(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnCommentsEvent implements ListenForComments {
+  const factory OnCommentsEvent(final List<Comment> comments) = _$OnCommentsEvent;
+
+  List<Comment> get comments => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$OnCommentsEventCopyWith<_$OnCommentsEvent> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ListenForCommentsErrorCopyWith<$Res> {
+  factory _$$_ListenForCommentsErrorCopyWith(
+          _$_ListenForCommentsError value, $Res Function(_$_ListenForCommentsError) then) =
+      __$$_ListenForCommentsErrorCopyWithImpl<$Res>;
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class __$$_ListenForCommentsErrorCopyWithImpl<$Res> extends _$ListenForCommentsCopyWithImpl<$Res>
+    implements _$$_ListenForCommentsErrorCopyWith<$Res> {
+  __$$_ListenForCommentsErrorCopyWithImpl(
+      _$_ListenForCommentsError _value, $Res Function(_$_ListenForCommentsError) _then)
+      : super(_value, (v) => _then(v as _$_ListenForCommentsError));
+
+  @override
+  _$_ListenForCommentsError get _value => super._value as _$_ListenForCommentsError;
+
+  @override
+  $Res call({
+    Object? error = freezed,
+    Object? stackTrace = freezed,
+  }) {
+    return _then(_$_ListenForCommentsError(
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as Object,
+      stackTrace == freezed
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ListenForCommentsError implements _ListenForCommentsError {
+  const _$_ListenForCommentsError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'ListenForComments.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ListenForCommentsError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ListenForCommentsErrorCopyWith<_$_ListenForCommentsError> get copyWith =>
+      __$$_ListenForCommentsErrorCopyWithImpl<_$_ListenForCommentsError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int movieId) start,
+    required TResult Function(int movieId) done,
+    required TResult Function(List<Comment> comments) event,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return error?.call(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int movieId)? start,
+    TResult Function(int movieId)? done,
+    TResult Function(List<Comment> comments)? event,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ListenForCommentsStart value) start,
+    required TResult Function(ListenForCommentsDone value) done,
+    required TResult Function(OnCommentsEvent value) event,
+    required TResult Function(_ListenForCommentsError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ListenForCommentsStart value)? start,
+    TResult Function(ListenForCommentsDone value)? done,
+    TResult Function(OnCommentsEvent value)? event,
+    TResult Function(_ListenForCommentsError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ListenForCommentsError implements ListenForComments, ErrorAction {
+  const factory _ListenForCommentsError(final Object error, final StackTrace stackTrace) = _$_ListenForCommentsError;
+
+  Object get error => throw _privateConstructorUsedError;
+  StackTrace get stackTrace => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$_ListenForCommentsErrorCopyWith<_$_ListenForCommentsError> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$SetSelectedMovieId {
+  int get movieId => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SetSelectedMovieIdCopyWith<SetSelectedMovieId> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SetSelectedMovieIdCopyWith<$Res> {
+  factory $SetSelectedMovieIdCopyWith(SetSelectedMovieId value, $Res Function(SetSelectedMovieId) then) =
+      _$SetSelectedMovieIdCopyWithImpl<$Res>;
+  $Res call({int movieId});
+}
+
+/// @nodoc
+class _$SetSelectedMovieIdCopyWithImpl<$Res> implements $SetSelectedMovieIdCopyWith<$Res> {
+  _$SetSelectedMovieIdCopyWithImpl(this._value, this._then);
+
+  final SetSelectedMovieId _value;
+  // ignore: unused_field
+  final $Res Function(SetSelectedMovieId) _then;
+
+  @override
+  $Res call({
+    Object? movieId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      movieId: movieId == freezed
+          ? _value.movieId
+          : movieId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$SetSelectedMovieId$CopyWith<$Res> implements $SetSelectedMovieIdCopyWith<$Res> {
+  factory _$$SetSelectedMovieId$CopyWith(_$SetSelectedMovieId$ value, $Res Function(_$SetSelectedMovieId$) then) =
+      __$$SetSelectedMovieId$CopyWithImpl<$Res>;
+  @override
+  $Res call({int movieId});
+}
+
+/// @nodoc
+class __$$SetSelectedMovieId$CopyWithImpl<$Res> extends _$SetSelectedMovieIdCopyWithImpl<$Res>
+    implements _$$SetSelectedMovieId$CopyWith<$Res> {
+  __$$SetSelectedMovieId$CopyWithImpl(_$SetSelectedMovieId$ _value, $Res Function(_$SetSelectedMovieId$) _then)
+      : super(_value, (v) => _then(v as _$SetSelectedMovieId$));
+
+  @override
+  _$SetSelectedMovieId$ get _value => super._value as _$SetSelectedMovieId$;
+
+  @override
+  $Res call({
+    Object? movieId = freezed,
+  }) {
+    return _then(_$SetSelectedMovieId$(
+      movieId == freezed
+          ? _value.movieId
+          : movieId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetSelectedMovieId$ implements SetSelectedMovieId$ {
+  const _$SetSelectedMovieId$(this.movieId);
+
+  @override
+  final int movieId;
+
+  @override
+  String toString() {
+    return 'SetSelectedMovieId(movieId: $movieId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetSelectedMovieId$ &&
+            const DeepCollectionEquality().equals(other.movieId, movieId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(movieId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$SetSelectedMovieId$CopyWith<_$SetSelectedMovieId$> get copyWith =>
+      __$$SetSelectedMovieId$CopyWithImpl<_$SetSelectedMovieId$>(this, _$identity);
+}
+
+abstract class SetSelectedMovieId$ implements SetSelectedMovieId {
+  const factory SetSelectedMovieId$(final int movieId) = _$SetSelectedMovieId$;
+
+  @override
+  int get movieId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$SetSelectedMovieId$CopyWith<_$SetSelectedMovieId$> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$CreateComment {
+  String get pendingId => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text, String pendingId) start,
+    required TResult Function(String pendingId) successful,
+    required TResult Function(Object error, StackTrace stackTrace, String pendingId) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CreateCommentStart value) start,
+    required TResult Function(CreateCommentSuccessful value) successful,
+    required TResult Function(CreateCommentError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $CreateCommentCopyWith<CreateComment> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CreateCommentCopyWith<$Res> {
+  factory $CreateCommentCopyWith(CreateComment value, $Res Function(CreateComment) then) =
+      _$CreateCommentCopyWithImpl<$Res>;
+  $Res call({String pendingId});
+}
+
+/// @nodoc
+class _$CreateCommentCopyWithImpl<$Res> implements $CreateCommentCopyWith<$Res> {
+  _$CreateCommentCopyWithImpl(this._value, this._then);
+
+  final CreateComment _value;
+  // ignore: unused_field
+  final $Res Function(CreateComment) _then;
+
+  @override
+  $Res call({
+    Object? pendingId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      pendingId: pendingId == freezed
+          ? _value.pendingId
+          : pendingId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$CreateCommentStartCopyWith<$Res> implements $CreateCommentCopyWith<$Res> {
+  factory _$$CreateCommentStartCopyWith(_$CreateCommentStart value, $Res Function(_$CreateCommentStart) then) =
+      __$$CreateCommentStartCopyWithImpl<$Res>;
+  @override
+  $Res call({String text, String pendingId});
+}
+
+/// @nodoc
+class __$$CreateCommentStartCopyWithImpl<$Res> extends _$CreateCommentCopyWithImpl<$Res>
+    implements _$$CreateCommentStartCopyWith<$Res> {
+  __$$CreateCommentStartCopyWithImpl(_$CreateCommentStart _value, $Res Function(_$CreateCommentStart) _then)
+      : super(_value, (v) => _then(v as _$CreateCommentStart));
+
+  @override
+  _$CreateCommentStart get _value => super._value as _$CreateCommentStart;
+
+  @override
+  $Res call({
+    Object? text = freezed,
+    Object? pendingId = freezed,
+  }) {
+    return _then(_$CreateCommentStart(
+      text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      pendingId: pendingId == freezed
+          ? _value.pendingId
+          : pendingId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateCommentStart implements CreateCommentStart {
+  const _$CreateCommentStart(this.text, {this.pendingId = _kCreateCommentPendingId});
+
+  @override
+  final String text;
+  @override
+  @JsonKey()
+  final String pendingId;
+
+  @override
+  String toString() {
+    return 'CreateComment.start(text: $text, pendingId: $pendingId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentStart &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.pendingId, pendingId));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(text), const DeepCollectionEquality().hash(pendingId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$CreateCommentStartCopyWith<_$CreateCommentStart> get copyWith =>
+      __$$CreateCommentStartCopyWithImpl<_$CreateCommentStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text, String pendingId) start,
+    required TResult Function(String pendingId) successful,
+    required TResult Function(Object error, StackTrace stackTrace, String pendingId) error,
+  }) {
+    return start(text, pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+  }) {
+    return start?.call(text, pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(text, pendingId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CreateCommentStart value) start,
+    required TResult Function(CreateCommentSuccessful value) successful,
+    required TResult Function(CreateCommentError value) error,
+  }) {
+    return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+  }) {
+    return start?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+    required TResult orElse(),
+  }) {
+    if (start != null) {
+      return start(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCommentStart implements CreateComment, ActionStart {
+  const factory CreateCommentStart(final String text, {final String pendingId}) = _$CreateCommentStart;
+
+  String get text => throw _privateConstructorUsedError;
+  @override
+  String get pendingId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateCommentStartCopyWith<_$CreateCommentStart> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CreateCommentSuccessfulCopyWith<$Res> implements $CreateCommentCopyWith<$Res> {
+  factory _$$CreateCommentSuccessfulCopyWith(
+          _$CreateCommentSuccessful value, $Res Function(_$CreateCommentSuccessful) then) =
+      __$$CreateCommentSuccessfulCopyWithImpl<$Res>;
+  @override
+  $Res call({String pendingId});
+}
+
+/// @nodoc
+class __$$CreateCommentSuccessfulCopyWithImpl<$Res> extends _$CreateCommentCopyWithImpl<$Res>
+    implements _$$CreateCommentSuccessfulCopyWith<$Res> {
+  __$$CreateCommentSuccessfulCopyWithImpl(
+      _$CreateCommentSuccessful _value, $Res Function(_$CreateCommentSuccessful) _then)
+      : super(_value, (v) => _then(v as _$CreateCommentSuccessful));
+
+  @override
+  _$CreateCommentSuccessful get _value => super._value as _$CreateCommentSuccessful;
+
+  @override
+  $Res call({
+    Object? pendingId = freezed,
+  }) {
+    return _then(_$CreateCommentSuccessful(
+      pendingId == freezed
+          ? _value.pendingId
+          : pendingId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateCommentSuccessful implements CreateCommentSuccessful {
+  const _$CreateCommentSuccessful([this.pendingId = _kCreateCommentPendingId]);
+
+  @override
+  @JsonKey()
+  final String pendingId;
+
+  @override
+  String toString() {
+    return 'CreateComment.successful(pendingId: $pendingId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentSuccessful &&
+            const DeepCollectionEquality().equals(other.pendingId, pendingId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(pendingId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$CreateCommentSuccessfulCopyWith<_$CreateCommentSuccessful> get copyWith =>
+      __$$CreateCommentSuccessfulCopyWithImpl<_$CreateCommentSuccessful>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text, String pendingId) start,
+    required TResult Function(String pendingId) successful,
+    required TResult Function(Object error, StackTrace stackTrace, String pendingId) error,
+  }) {
+    return successful(pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+  }) {
+    return successful?.call(pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(pendingId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CreateCommentStart value) start,
+    required TResult Function(CreateCommentSuccessful value) successful,
+    required TResult Function(CreateCommentError value) error,
+  }) {
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+  }) {
+    return successful?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCommentSuccessful implements CreateComment, ActionDone {
+  const factory CreateCommentSuccessful([final String pendingId]) = _$CreateCommentSuccessful;
+
+  @override
+  String get pendingId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateCommentSuccessfulCopyWith<_$CreateCommentSuccessful> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$CreateCommentErrorCopyWith<$Res> implements $CreateCommentCopyWith<$Res> {
+  factory _$$CreateCommentErrorCopyWith(_$CreateCommentError value, $Res Function(_$CreateCommentError) then) =
+      __$$CreateCommentErrorCopyWithImpl<$Res>;
+  @override
+  $Res call({Object error, StackTrace stackTrace, String pendingId});
+}
+
+/// @nodoc
+class __$$CreateCommentErrorCopyWithImpl<$Res> extends _$CreateCommentCopyWithImpl<$Res>
+    implements _$$CreateCommentErrorCopyWith<$Res> {
+  __$$CreateCommentErrorCopyWithImpl(_$CreateCommentError _value, $Res Function(_$CreateCommentError) _then)
+      : super(_value, (v) => _then(v as _$CreateCommentError));
+
+  @override
+  _$CreateCommentError get _value => super._value as _$CreateCommentError;
+
+  @override
+  $Res call({
+    Object? error = freezed,
+    Object? stackTrace = freezed,
+    Object? pendingId = freezed,
+  }) {
+    return _then(_$CreateCommentError(
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as Object,
+      stackTrace == freezed
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+      pendingId == freezed
+          ? _value.pendingId
+          : pendingId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CreateCommentError implements CreateCommentError {
+  const _$CreateCommentError(this.error, this.stackTrace, [this.pendingId = _kCreateCommentPendingId]);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+  @override
+  @JsonKey()
+  final String pendingId;
+
+  @override
+  String toString() {
+    return 'CreateComment.error(error: $error, stackTrace: $stackTrace, pendingId: $pendingId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCommentError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace) &&
+            const DeepCollectionEquality().equals(other.pendingId, pendingId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error),
+      const DeepCollectionEquality().hash(stackTrace), const DeepCollectionEquality().hash(pendingId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$CreateCommentErrorCopyWith<_$CreateCommentError> get copyWith =>
+      __$$CreateCommentErrorCopyWithImpl<_$CreateCommentError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String text, String pendingId) start,
+    required TResult Function(String pendingId) successful,
+    required TResult Function(Object error, StackTrace stackTrace, String pendingId) error,
+  }) {
+    return error(this.error, stackTrace, pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+  }) {
+    return error?.call(this.error, stackTrace, pendingId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String text, String pendingId)? start,
+    TResult Function(String pendingId)? successful,
+    TResult Function(Object error, StackTrace stackTrace, String pendingId)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace, pendingId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(CreateCommentStart value) start,
+    required TResult Function(CreateCommentSuccessful value) successful,
+    required TResult Function(CreateCommentError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(CreateCommentStart value)? start,
+    TResult Function(CreateCommentSuccessful value)? successful,
+    TResult Function(CreateCommentError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateCommentError implements CreateComment, ActionDone, ErrorAction {
+  const factory CreateCommentError(final Object error, final StackTrace stackTrace, [final String pendingId]) =
+      _$CreateCommentError;
+
+  Object get error => throw _privateConstructorUsedError;
+  StackTrace get stackTrace => throw _privateConstructorUsedError;
+  @override
+  String get pendingId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateCommentErrorCopyWith<_$CreateCommentError> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$GetUser {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String uid) $default, {
+    required TResult Function(AppUser user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(GetUserStart value) $default, {
+    required TResult Function(GetUserSuccessful value) successful,
+    required TResult Function(GetUserError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetUserCopyWith<$Res> {
+  factory $GetUserCopyWith(GetUser value, $Res Function(GetUser) then) = _$GetUserCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$GetUserCopyWithImpl<$Res> implements $GetUserCopyWith<$Res> {
+  _$GetUserCopyWithImpl(this._value, this._then);
+
+  final GetUser _value;
+  // ignore: unused_field
+  final $Res Function(GetUser) _then;
+}
+
+/// @nodoc
+abstract class _$$GetUserStartCopyWith<$Res> {
+  factory _$$GetUserStartCopyWith(_$GetUserStart value, $Res Function(_$GetUserStart) then) =
+      __$$GetUserStartCopyWithImpl<$Res>;
+  $Res call({String uid});
+}
+
+/// @nodoc
+class __$$GetUserStartCopyWithImpl<$Res> extends _$GetUserCopyWithImpl<$Res> implements _$$GetUserStartCopyWith<$Res> {
+  __$$GetUserStartCopyWithImpl(_$GetUserStart _value, $Res Function(_$GetUserStart) _then)
+      : super(_value, (v) => _then(v as _$GetUserStart));
+
+  @override
+  _$GetUserStart get _value => super._value as _$GetUserStart;
+
+  @override
+  $Res call({
+    Object? uid = freezed,
+  }) {
+    return _then(_$GetUserStart(
+      uid == freezed
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetUserStart implements GetUserStart {
+  const _$GetUserStart(this.uid);
+
+  @override
+  final String uid;
+
+  @override
+  String toString() {
+    return 'GetUser(uid: $uid)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserStart &&
+            const DeepCollectionEquality().equals(other.uid, uid));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(uid));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GetUserStartCopyWith<_$GetUserStart> get copyWith =>
+      __$$GetUserStartCopyWithImpl<_$GetUserStart>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String uid) $default, {
+    required TResult Function(AppUser user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return $default(uid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return $default?.call(uid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(uid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(GetUserStart value) $default, {
+    required TResult Function(GetUserSuccessful value) successful,
+    required TResult Function(GetUserError value) error,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserStart implements GetUser {
+  const factory GetUserStart(final String uid) = _$GetUserStart;
+
+  String get uid => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetUserStartCopyWith<_$GetUserStart> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetUserSuccessfulCopyWith<$Res> {
+  factory _$$GetUserSuccessfulCopyWith(_$GetUserSuccessful value, $Res Function(_$GetUserSuccessful) then) =
+      __$$GetUserSuccessfulCopyWithImpl<$Res>;
+  $Res call({AppUser user});
+
+  $AppUserCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class __$$GetUserSuccessfulCopyWithImpl<$Res> extends _$GetUserCopyWithImpl<$Res>
+    implements _$$GetUserSuccessfulCopyWith<$Res> {
+  __$$GetUserSuccessfulCopyWithImpl(_$GetUserSuccessful _value, $Res Function(_$GetUserSuccessful) _then)
+      : super(_value, (v) => _then(v as _$GetUserSuccessful));
+
+  @override
+  _$GetUserSuccessful get _value => super._value as _$GetUserSuccessful;
+
+  @override
+  $Res call({
+    Object? user = freezed,
+  }) {
+    return _then(_$GetUserSuccessful(
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as AppUser,
+    ));
+  }
+
+  @override
+  $AppUserCopyWith<$Res> get user {
+    return $AppUserCopyWith<$Res>(_value.user, (value) {
+      return _then(_value.copyWith(user: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$GetUserSuccessful implements GetUserSuccessful {
+  const _$GetUserSuccessful(this.user);
+
+  @override
+  final AppUser user;
+
+  @override
+  String toString() {
+    return 'GetUser.successful(user: $user)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserSuccessful &&
+            const DeepCollectionEquality().equals(other.user, user));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GetUserSuccessfulCopyWith<_$GetUserSuccessful> get copyWith =>
+      __$$GetUserSuccessfulCopyWithImpl<_$GetUserSuccessful>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String uid) $default, {
+    required TResult Function(AppUser user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return successful(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return successful?.call(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(GetUserStart value) $default, {
+    required TResult Function(GetUserSuccessful value) successful,
+    required TResult Function(GetUserError value) error,
+  }) {
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+  }) {
+    return successful?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserSuccessful implements GetUser {
+  const factory GetUserSuccessful(final AppUser user) = _$GetUserSuccessful;
+
+  AppUser get user => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetUserSuccessfulCopyWith<_$GetUserSuccessful> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetUserErrorCopyWith<$Res> {
+  factory _$$GetUserErrorCopyWith(_$GetUserError value, $Res Function(_$GetUserError) then) =
+      __$$GetUserErrorCopyWithImpl<$Res>;
+  $Res call({Object error, StackTrace stackTrace});
+}
+
+/// @nodoc
+class __$$GetUserErrorCopyWithImpl<$Res> extends _$GetUserCopyWithImpl<$Res> implements _$$GetUserErrorCopyWith<$Res> {
+  __$$GetUserErrorCopyWithImpl(_$GetUserError _value, $Res Function(_$GetUserError) _then)
+      : super(_value, (v) => _then(v as _$GetUserError));
+
+  @override
+  _$GetUserError get _value => super._value as _$GetUserError;
+
+  @override
+  $Res call({
+    Object? error = freezed,
+    Object? stackTrace = freezed,
+  }) {
+    return _then(_$GetUserError(
+      error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as Object,
+      stackTrace == freezed
+          ? _value.stackTrace
+          : stackTrace // ignore: cast_nullable_to_non_nullable
+              as StackTrace,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetUserError implements GetUserError {
+  const _$GetUserError(this.error, this.stackTrace);
+
+  @override
+  final Object error;
+  @override
+  final StackTrace stackTrace;
+
+  @override
+  String toString() {
+    return 'GetUser.error(error: $error, stackTrace: $stackTrace)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserError &&
+            const DeepCollectionEquality().equals(other.error, error) &&
+            const DeepCollectionEquality().equals(other.stackTrace, stackTrace));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(error), const DeepCollectionEquality().hash(stackTrace));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GetUserErrorCopyWith<_$GetUserError> get copyWith =>
+      __$$GetUserErrorCopyWithImpl<_$GetUserError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String uid) $default, {
+    required TResult Function(AppUser user) successful,
+    required TResult Function(Object error, StackTrace stackTrace) error,
+  }) {
+    return error(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+  }) {
+    return error?.call(this.error, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String uid)? $default, {
+    TResult Function(AppUser user)? successful,
+    TResult Function(Object error, StackTrace stackTrace)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this.error, stackTrace);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(GetUserStart value) $default, {
+    required TResult Function(GetUserSuccessful value) successful,
+    required TResult Function(GetUserError value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(GetUserStart value)? $default, {
+    TResult Function(GetUserSuccessful value)? successful,
+    TResult Function(GetUserError value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserError implements GetUser, ErrorAction {
+  const factory GetUserError(final Object error, final StackTrace stackTrace) = _$GetUserError;
+
+  Object get error => throw _privateConstructorUsedError;
+  StackTrace get stackTrace => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$GetUserErrorCopyWith<_$GetUserError> get copyWith => throw _privateConstructorUsedError;
 }

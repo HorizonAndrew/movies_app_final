@@ -9,6 +9,7 @@ import 'package:movies_app/data/auth_api.dart';
 import 'package:movies_app/data/movie_api.dart';
 import 'package:movies_app/epics/app_epic.dart';
 import 'package:movies_app/models/index.dart';
+import 'package:movies_app/presentation/comments_page.dart';
 import 'package:movies_app/presentation/home.dart';
 import 'package:movies_app/presentation/login_page.dart';
 import 'package:movies_app/presentation/sign_up_page.dart';
@@ -25,7 +26,7 @@ Future<void> main() async {
 
   final Client client = Client();
 
-  final MovieApi movieApi = MovieApi(client);
+  final MovieApi movieApi = MovieApi(client, firestore);
   final AuthApi authApi = AuthApi(auth, firestore);
   final AppEpic epic = AppEpic(movieApi, authApi);
 
@@ -55,6 +56,7 @@ class MoviesApp extends StatelessWidget {
           '/': (BuildContext context) => const Home(),
           '/signup': (BuildContext context) => const SignUpPage(),
           '/login': (BuildContext context) => const LoginPage(),
+          '/comments': (BuildContext context) => const CommentsPage(),
         },
       ),
     );
