@@ -20,24 +20,24 @@ mixin _$AppState {
   bool get isLoading => throw _privateConstructorUsedError;
   int get pageNumber => throw _privateConstructorUsedError;
   AppUser? get user => throw _privateConstructorUsedError;
-  Set<String> get pending => throw _privateConstructorUsedError;
   List<Comment> get comments => throw _privateConstructorUsedError;
   int? get selectedMovieId => throw _privateConstructorUsedError;
   Map<String, AppUser> get users => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AppStateCopyWith<AppState> get copyWith => throw _privateConstructorUsedError;
+  $AppStateCopyWith<AppState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AppStateCopyWith<$Res> {
-  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) = _$AppStateCopyWithImpl<$Res>;
+  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
+      _$AppStateCopyWithImpl<$Res>;
   $Res call(
       {List<Movie> movies,
       bool isLoading,
       int pageNumber,
       AppUser? user,
-      Set<String> pending,
       List<Comment> comments,
       int? selectedMovieId,
       Map<String, AppUser> users});
@@ -59,7 +59,6 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
     Object? isLoading = freezed,
     Object? pageNumber = freezed,
     Object? user = freezed,
-    Object? pending = freezed,
     Object? comments = freezed,
     Object? selectedMovieId = freezed,
     Object? users = freezed,
@@ -81,10 +80,6 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as AppUser?,
-      pending: pending == freezed
-          ? _value.pending
-          : pending // ignore: cast_nullable_to_non_nullable
-              as Set<String>,
       comments: comments == freezed
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
@@ -114,14 +109,15 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
-  factory _$$AppState$CopyWith(_$AppState$ value, $Res Function(_$AppState$) then) = __$$AppState$CopyWithImpl<$Res>;
+  factory _$$AppState$CopyWith(
+          _$AppState$ value, $Res Function(_$AppState$) then) =
+      __$$AppState$CopyWithImpl<$Res>;
   @override
   $Res call(
       {List<Movie> movies,
       bool isLoading,
       int pageNumber,
       AppUser? user,
-      Set<String> pending,
       List<Comment> comments,
       int? selectedMovieId,
       Map<String, AppUser> users});
@@ -131,8 +127,10 @@ abstract class _$$AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> implements _$$AppState$CopyWith<$Res> {
-  __$$AppState$CopyWithImpl(_$AppState$ _value, $Res Function(_$AppState$) _then)
+class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
+    implements _$$AppState$CopyWith<$Res> {
+  __$$AppState$CopyWithImpl(
+      _$AppState$ _value, $Res Function(_$AppState$) _then)
       : super(_value, (v) => _then(v as _$AppState$));
 
   @override
@@ -144,7 +142,6 @@ class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> imple
     Object? isLoading = freezed,
     Object? pageNumber = freezed,
     Object? user = freezed,
-    Object? pending = freezed,
     Object? comments = freezed,
     Object? selectedMovieId = freezed,
     Object? users = freezed,
@@ -166,10 +163,6 @@ class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> imple
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as AppUser?,
-      pending: pending == freezed
-          ? _value._pending
-          : pending // ignore: cast_nullable_to_non_nullable
-              as Set<String>,
       comments: comments == freezed
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
@@ -194,12 +187,10 @@ class _$AppState$ implements AppState$ {
       this.isLoading = true,
       this.pageNumber = 1,
       this.user,
-      final Set<String> pending = const <String>{},
       final List<Comment> comments = const <Comment>[],
       this.selectedMovieId,
       final Map<String, AppUser> users = const <String, AppUser>{}})
       : _movies = movies,
-        _pending = pending,
         _comments = comments,
         _users = users;
 
@@ -219,14 +210,6 @@ class _$AppState$ implements AppState$ {
   final int pageNumber;
   @override
   final AppUser? user;
-  final Set<String> _pending;
-  @override
-  @JsonKey()
-  Set<String> get pending {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableSetView(_pending);
-  }
-
   final List<Comment> _comments;
   @override
   @JsonKey()
@@ -247,7 +230,7 @@ class _$AppState$ implements AppState$ {
 
   @override
   String toString() {
-    return 'AppState(movies: $movies, isLoading: $isLoading, pageNumber: $pageNumber, user: $user, pending: $pending, comments: $comments, selectedMovieId: $selectedMovieId, users: $users)';
+    return 'AppState(movies: $movies, isLoading: $isLoading, pageNumber: $pageNumber, user: $user, comments: $comments, selectedMovieId: $selectedMovieId, users: $users)';
   }
 
   @override
@@ -257,11 +240,12 @@ class _$AppState$ implements AppState$ {
             other is _$AppState$ &&
             const DeepCollectionEquality().equals(other._movies, _movies) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality().equals(other.pageNumber, pageNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.pageNumber, pageNumber) &&
             const DeepCollectionEquality().equals(other.user, user) &&
-            const DeepCollectionEquality().equals(other._pending, _pending) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
-            const DeepCollectionEquality().equals(other.selectedMovieId, selectedMovieId) &&
+            const DeepCollectionEquality()
+                .equals(other.selectedMovieId, selectedMovieId) &&
             const DeepCollectionEquality().equals(other._users, _users));
   }
 
@@ -272,14 +256,14 @@ class _$AppState$ implements AppState$ {
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(pageNumber),
       const DeepCollectionEquality().hash(user),
-      const DeepCollectionEquality().hash(_pending),
       const DeepCollectionEquality().hash(_comments),
       const DeepCollectionEquality().hash(selectedMovieId),
       const DeepCollectionEquality().hash(_users));
 
   @JsonKey(ignore: true)
   @override
-  _$$AppState$CopyWith<_$AppState$> get copyWith => __$$AppState$CopyWithImpl<_$AppState$>(this, _$identity);
+  _$$AppState$CopyWith<_$AppState$> get copyWith =>
+      __$$AppState$CopyWithImpl<_$AppState$>(this, _$identity);
 }
 
 abstract class AppState$ implements AppState {
@@ -288,7 +272,6 @@ abstract class AppState$ implements AppState {
       final bool isLoading,
       final int pageNumber,
       final AppUser? user,
-      final Set<String> pending,
       final List<Comment> comments,
       final int? selectedMovieId,
       final Map<String, AppUser> users}) = _$AppState$;
@@ -302,8 +285,6 @@ abstract class AppState$ implements AppState {
   @override
   AppUser? get user => throw _privateConstructorUsedError;
   @override
-  Set<String> get pending => throw _privateConstructorUsedError;
-  @override
   List<Comment> get comments => throw _privateConstructorUsedError;
   @override
   int? get selectedMovieId => throw _privateConstructorUsedError;
@@ -311,7 +292,8 @@ abstract class AppState$ implements AppState {
   Map<String, AppUser> get users => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$AppState$CopyWith<_$AppState$> get copyWith => throw _privateConstructorUsedError;
+  _$$AppState$CopyWith<_$AppState$> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 AppUser _$AppUserFromJson(Map<String, dynamic> json) {
@@ -332,8 +314,10 @@ mixin _$AppUser {
 
 /// @nodoc
 abstract class $AppUserCopyWith<$Res> {
-  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) = _$AppUserCopyWithImpl<$Res>;
-  $Res call({String uid, String email, String username, List<int> favoriteMovies});
+  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
+      _$AppUserCopyWithImpl<$Res>;
+  $Res call(
+      {String uid, String email, String username, List<int> favoriteMovies});
 }
 
 /// @nodoc
@@ -374,13 +358,17 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$AppUser$CopyWith<$Res> implements $AppUserCopyWith<$Res> {
-  factory _$$AppUser$CopyWith(_$AppUser$ value, $Res Function(_$AppUser$) then) = __$$AppUser$CopyWithImpl<$Res>;
+  factory _$$AppUser$CopyWith(
+          _$AppUser$ value, $Res Function(_$AppUser$) then) =
+      __$$AppUser$CopyWithImpl<$Res>;
   @override
-  $Res call({String uid, String email, String username, List<int> favoriteMovies});
+  $Res call(
+      {String uid, String email, String username, List<int> favoriteMovies});
 }
 
 /// @nodoc
-class __$$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res> implements _$$AppUser$CopyWith<$Res> {
+class __$$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
+    implements _$$AppUser$CopyWith<$Res> {
   __$$AppUser$CopyWithImpl(_$AppUser$ _value, $Res Function(_$AppUser$) _then)
       : super(_value, (v) => _then(v as _$AppUser$));
 
@@ -419,10 +407,14 @@ class __$$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res> impleme
 @JsonSerializable()
 class _$AppUser$ implements AppUser$ {
   const _$AppUser$(
-      {required this.uid, required this.email, required this.username, final List<int> favoriteMovies = const <int>[]})
+      {required this.uid,
+      required this.email,
+      required this.username,
+      final List<int> favoriteMovies = const <int>[]})
       : _favoriteMovies = favoriteMovies;
 
-  factory _$AppUser$.fromJson(Map<String, dynamic> json) => _$$AppUser$FromJson(json);
+  factory _$AppUser$.fromJson(Map<String, dynamic> json) =>
+      _$$AppUser$FromJson(json);
 
   @override
   final String uid;
@@ -451,7 +443,8 @@ class _$AppUser$ implements AppUser$ {
             const DeepCollectionEquality().equals(other.uid, uid) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.username, username) &&
-            const DeepCollectionEquality().equals(other._favoriteMovies, _favoriteMovies));
+            const DeepCollectionEquality()
+                .equals(other._favoriteMovies, _favoriteMovies));
   }
 
   @JsonKey(ignore: true)
@@ -465,7 +458,8 @@ class _$AppUser$ implements AppUser$ {
 
   @JsonKey(ignore: true)
   @override
-  _$$AppUser$CopyWith<_$AppUser$> get copyWith => __$$AppUser$CopyWithImpl<_$AppUser$>(this, _$identity);
+  _$$AppUser$CopyWith<_$AppUser$> get copyWith =>
+      __$$AppUser$CopyWithImpl<_$AppUser$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -492,7 +486,8 @@ abstract class AppUser$ implements AppUser {
   List<int> get favoriteMovies => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$AppUser$CopyWith<_$AppUser$> get copyWith => throw _privateConstructorUsedError;
+  _$$AppUser$CopyWith<_$AppUser$> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Movie _$MovieFromJson(Map<String, dynamic> json) {
@@ -516,7 +511,8 @@ mixin _$Movie {
 
 /// @nodoc
 abstract class $MovieCopyWith<$Res> {
-  factory $MovieCopyWith(Movie value, $Res Function(Movie) then) = _$MovieCopyWithImpl<$Res>;
+  factory $MovieCopyWith(Movie value, $Res Function(Movie) then) =
+      _$MovieCopyWithImpl<$Res>;
   $Res call(
       {int id,
       String title,
@@ -574,7 +570,8 @@ class _$MovieCopyWithImpl<$Res> implements $MovieCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$Movie$CopyWith<$Res> implements $MovieCopyWith<$Res> {
-  factory _$$Movie$CopyWith(_$Movie$ value, $Res Function(_$Movie$) then) = __$$Movie$CopyWithImpl<$Res>;
+  factory _$$Movie$CopyWith(_$Movie$ value, $Res Function(_$Movie$) then) =
+      __$$Movie$CopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -586,8 +583,10 @@ abstract class _$$Movie$CopyWith<$Res> implements $MovieCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res> implements _$$Movie$CopyWith<$Res> {
-  __$$Movie$CopyWithImpl(_$Movie$ _value, $Res Function(_$Movie$) _then) : super(_value, (v) => _then(v as _$Movie$));
+class __$$Movie$CopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res>
+    implements _$$Movie$CopyWith<$Res> {
+  __$$Movie$CopyWithImpl(_$Movie$ _value, $Res Function(_$Movie$) _then)
+      : super(_value, (v) => _then(v as _$Movie$));
 
   @override
   _$Movie$ get _value => super._value as _$Movie$;
@@ -642,7 +641,8 @@ class _$Movie$ implements Movie$ {
       @JsonKey(name: 'medium_cover_image') required this.poster})
       : _genres = genres;
 
-  factory _$Movie$.fromJson(Map<String, dynamic> json) => _$$Movie$FromJson(json);
+  factory _$Movie$.fromJson(Map<String, dynamic> json) =>
+      _$$Movie$FromJson(json);
 
   @override
   final int id;
@@ -694,7 +694,8 @@ class _$Movie$ implements Movie$ {
 
   @JsonKey(ignore: true)
   @override
-  _$$Movie$CopyWith<_$Movie$> get copyWith => __$$Movie$CopyWithImpl<_$Movie$>(this, _$identity);
+  _$$Movie$CopyWith<_$Movie$> get copyWith =>
+      __$$Movie$CopyWithImpl<_$Movie$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -704,12 +705,13 @@ class _$Movie$ implements Movie$ {
 
 abstract class Movie$ implements Movie {
   const factory Movie$(
-      {required final int id,
-      required final String title,
-      required final int year,
-      required final double rating,
-      required final List<String> genres,
-      @JsonKey(name: 'medium_cover_image') required final String poster}) = _$Movie$;
+          {required final int id,
+          required final String title,
+          required final int year,
+          required final double rating,
+          required final List<String> genres,
+          @JsonKey(name: 'medium_cover_image') required final String poster}) =
+      _$Movie$;
 
   factory Movie$.fromJson(Map<String, dynamic> json) = _$Movie$.fromJson;
 
@@ -728,7 +730,8 @@ abstract class Movie$ implements Movie {
   String get poster => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$Movie$CopyWith<_$Movie$> get copyWith => throw _privateConstructorUsedError;
+  _$$Movie$CopyWith<_$Movie$> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Comment _$CommentFromJson(Map<String, dynamic> json) {
@@ -750,8 +753,10 @@ mixin _$Comment {
 
 /// @nodoc
 abstract class $CommentCopyWith<$Res> {
-  factory $CommentCopyWith(Comment value, $Res Function(Comment) then) = _$CommentCopyWithImpl<$Res>;
-  $Res call({String id, String uid, int movieId, String text, DateTime createdAt});
+  factory $CommentCopyWith(Comment value, $Res Function(Comment) then) =
+      _$CommentCopyWithImpl<$Res>;
+  $Res call(
+      {String id, String uid, int movieId, String text, DateTime createdAt});
 }
 
 /// @nodoc
@@ -797,13 +802,17 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$Comment$CopyWith<$Res> implements $CommentCopyWith<$Res> {
-  factory _$$Comment$CopyWith(_$Comment$ value, $Res Function(_$Comment$) then) = __$$Comment$CopyWithImpl<$Res>;
+  factory _$$Comment$CopyWith(
+          _$Comment$ value, $Res Function(_$Comment$) then) =
+      __$$Comment$CopyWithImpl<$Res>;
   @override
-  $Res call({String id, String uid, int movieId, String text, DateTime createdAt});
+  $Res call(
+      {String id, String uid, int movieId, String text, DateTime createdAt});
 }
 
 /// @nodoc
-class __$$Comment$CopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res> implements _$$Comment$CopyWith<$Res> {
+class __$$Comment$CopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
+    implements _$$Comment$CopyWith<$Res> {
   __$$Comment$CopyWithImpl(_$Comment$ _value, $Res Function(_$Comment$) _then)
       : super(_value, (v) => _then(v as _$Comment$));
 
@@ -847,9 +856,14 @@ class __$$Comment$CopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res> impleme
 @JsonSerializable()
 class _$Comment$ implements Comment$ {
   const _$Comment$(
-      {required this.id, required this.uid, required this.movieId, required this.text, required this.createdAt});
+      {required this.id,
+      required this.uid,
+      required this.movieId,
+      required this.text,
+      required this.createdAt});
 
-  factory _$Comment$.fromJson(Map<String, dynamic> json) => _$$Comment$FromJson(json);
+  factory _$Comment$.fromJson(Map<String, dynamic> json) =>
+      _$$Comment$FromJson(json);
 
   @override
   final String id;
@@ -891,7 +905,8 @@ class _$Comment$ implements Comment$ {
 
   @JsonKey(ignore: true)
   @override
-  _$$Comment$CopyWith<_$Comment$> get copyWith => __$$Comment$CopyWithImpl<_$Comment$>(this, _$identity);
+  _$$Comment$CopyWith<_$Comment$> get copyWith =>
+      __$$Comment$CopyWithImpl<_$Comment$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -921,5 +936,6 @@ abstract class Comment$ implements Comment {
   DateTime get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$Comment$CopyWith<_$Comment$> get copyWith => throw _privateConstructorUsedError;
+  _$$Comment$CopyWith<_$Comment$> get copyWith =>
+      throw _privateConstructorUsedError;
 }
