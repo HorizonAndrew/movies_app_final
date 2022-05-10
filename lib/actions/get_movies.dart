@@ -2,7 +2,7 @@ part of 'index.dart';
 
 @freezed
 class GetMovies with _$GetMovies implements AppAction {
-  const factory GetMovies(ActionResult onResult) = GetMoviesStart;
+  const factory GetMovies(ActionResult onResult, String genre) = GetMoviesStart;
 
   const factory GetMovies.successful(List<Movie> movies) = GetMoviesSuccessful;
 

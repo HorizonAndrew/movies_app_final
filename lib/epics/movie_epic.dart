@@ -20,7 +20,7 @@ class MovieEpic {
   Stream<AppAction> _getMovies(Stream<GetMoviesStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((GetMoviesStart action) {
       return Stream<void>.value(null)
-          .asyncMap((_) => _api.getMovies(store.state.pageNumber))
+          .asyncMap((_) => _api.getMovies(store.state.pageNumber, store.state.genre))
           .map<GetMovies>(GetMovies.successful)
           .onErrorReturnWith(GetMovies.error)
           .doOnData(action.onResult);

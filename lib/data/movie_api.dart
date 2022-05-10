@@ -9,10 +9,10 @@ class MovieApi {
   final Client _client;
   final FirebaseFirestore _firestore;
 
-  Future<List<Movie>> getMovies(int page) async {
+  Future<List<Movie>> getMovies(int page, String genre) async {
     final Response response = await _client.get(
       Uri.parse(
-        'https://yts.mx/api/v2/list_movies.json?quality=3D&page=$page',
+        'https://yts.mx/api/v2/list_movies.json?quality=3D&page=$page&genre=$genre',
       ),
     );
 

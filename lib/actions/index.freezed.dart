@@ -1002,21 +1002,21 @@ abstract class GetCurrentUserError implements GetCurrentUser, ErrorAction {
 mixin _$GetMovies {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(ActionResult onResult) $default, {
+    TResult Function(ActionResult onResult, String genre) $default, {
     required TResult Function(List<Movie> movies) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1064,7 +1064,7 @@ class _$GetMoviesCopyWithImpl<$Res> implements $GetMoviesCopyWith<$Res> {
 abstract class _$$GetMoviesStartCopyWith<$Res> {
   factory _$$GetMoviesStartCopyWith(_$GetMoviesStart value, $Res Function(_$GetMoviesStart) then) =
       __$$GetMoviesStartCopyWithImpl<$Res>;
-  $Res call({ActionResult onResult});
+  $Res call({ActionResult onResult, String genre});
 }
 
 /// @nodoc
@@ -1079,12 +1079,17 @@ class __$$GetMoviesStartCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
   @override
   $Res call({
     Object? onResult = freezed,
+    Object? genre = freezed,
   }) {
     return _then(_$GetMoviesStart(
       onResult == freezed
           ? _value.onResult
           : onResult // ignore: cast_nullable_to_non_nullable
               as ActionResult,
+      genre == freezed
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1092,14 +1097,16 @@ class __$$GetMoviesStartCopyWithImpl<$Res> extends _$GetMoviesCopyWithImpl<$Res>
 /// @nodoc
 
 class _$GetMoviesStart implements GetMoviesStart {
-  const _$GetMoviesStart(this.onResult);
+  const _$GetMoviesStart(this.onResult, this.genre);
 
   @override
   final ActionResult onResult;
+  @override
+  final String genre;
 
   @override
   String toString() {
-    return 'GetMovies(onResult: $onResult)';
+    return 'GetMovies(onResult: $onResult, genre: $genre)';
   }
 
   @override
@@ -1107,11 +1114,12 @@ class _$GetMoviesStart implements GetMoviesStart {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetMoviesStart &&
-            (identical(other.onResult, onResult) || other.onResult == onResult));
+            (identical(other.onResult, onResult) || other.onResult == onResult) &&
+            const DeepCollectionEquality().equals(other.genre, genre));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, onResult);
+  int get hashCode => Object.hash(runtimeType, onResult, const DeepCollectionEquality().hash(genre));
 
   @JsonKey(ignore: true)
   @override
@@ -1121,33 +1129,33 @@ class _$GetMoviesStart implements GetMoviesStart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(ActionResult onResult) $default, {
+    TResult Function(ActionResult onResult, String genre) $default, {
     required TResult Function(List<Movie> movies) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
-    return $default(onResult);
+    return $default(onResult, genre);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
-    return $default?.call(onResult);
+    return $default?.call(onResult, genre);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
   }) {
     if ($default != null) {
-      return $default(onResult);
+      return $default(onResult, genre);
     }
     return orElse();
   }
@@ -1188,9 +1196,10 @@ class _$GetMoviesStart implements GetMoviesStart {
 }
 
 abstract class GetMoviesStart implements GetMovies {
-  const factory GetMoviesStart(final ActionResult onResult) = _$GetMoviesStart;
+  const factory GetMoviesStart(final ActionResult onResult, final String genre) = _$GetMoviesStart;
 
   ActionResult get onResult => throw _privateConstructorUsedError;
+  String get genre => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$GetMoviesStartCopyWith<_$GetMoviesStart> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1260,7 +1269,7 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(ActionResult onResult) $default, {
+    TResult Function(ActionResult onResult, String genre) $default, {
     required TResult Function(List<Movie> movies) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1270,7 +1279,7 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -1280,7 +1289,7 @@ class _$GetMoviesSuccessful implements GetMoviesSuccessful {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),
@@ -1404,7 +1413,7 @@ class _$GetMoviesError implements GetMoviesError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function(ActionResult onResult) $default, {
+    TResult Function(ActionResult onResult, String genre) $default, {
     required TResult Function(List<Movie> movies) successful,
     required TResult Function(Object error, StackTrace stackTrace) error,
   }) {
@@ -1414,7 +1423,7 @@ class _$GetMoviesError implements GetMoviesError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
   }) {
@@ -1424,7 +1433,7 @@ class _$GetMoviesError implements GetMoviesError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function(ActionResult onResult)? $default, {
+    TResult Function(ActionResult onResult, String genre)? $default, {
     TResult Function(List<Movie> movies)? successful,
     TResult Function(Object error, StackTrace stackTrace)? error,
     required TResult orElse(),

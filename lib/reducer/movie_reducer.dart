@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:movies_app/actions/index.dart';
 import 'package:movies_app/models/index.dart';
 import 'package:redux/redux.dart';
@@ -11,12 +12,22 @@ Reducer<AppState> movieReducer = combineReducers<AppState>(<Reducer<AppState>>[
 ]);
 
 AppState _getMovies(AppState state, GetMovies action) {
+  if (kDebugMode) {
+    print('state.genre: ${state.genre}');
+  }
   return state.copyWith(isLoading: true);
 }
 
 AppState _getMoviesSuccessful(AppState state, GetMoviesSuccessful action) {
-  return state
-      .copyWith(isLoading: false, pageNumber: state.pageNumber + 1, movies: <Movie>[...state.movies, ...action.movies]);
+  if (kDebugMode) {
+    print('state.genre: ${state.genre}');
+  }
+  return state.copyWith(
+    isLoading: false,
+    pageNumber: state.pageNumber + 1,
+    genre: state.genre,
+    movies: <Movie>[...state.movies, ...action.movies],
+  );
 }
 
 AppState _getMoviesError(AppState state, GetMoviesError action) {

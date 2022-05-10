@@ -10,5 +10,6 @@ class AppState with _$AppState {
     @Default(<Comment>[]) List<Comment> comments,
     int? selectedMovieId,
     @Default(<String, AppUser>{}) Map<String /*uid*/, AppUser> users,
+    @Default('') String genre,
   }) = AppState$;
 }

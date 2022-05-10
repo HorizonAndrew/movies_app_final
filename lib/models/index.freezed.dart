@@ -23,6 +23,7 @@ mixin _$AppState {
   List<Comment> get comments => throw _privateConstructorUsedError;
   int? get selectedMovieId => throw _privateConstructorUsedError;
   Map<String, AppUser> get users => throw _privateConstructorUsedError;
+  String get genre => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppStateCopyWith<AppState> get copyWith => throw _privateConstructorUsedError;
@@ -38,7 +39,8 @@ abstract class $AppStateCopyWith<$Res> {
       AppUser? user,
       List<Comment> comments,
       int? selectedMovieId,
-      Map<String, AppUser> users});
+      Map<String, AppUser> users,
+      String genre});
 
   $AppUserCopyWith<$Res>? get user;
 }
@@ -60,6 +62,7 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
     Object? comments = freezed,
     Object? selectedMovieId = freezed,
     Object? users = freezed,
+    Object? genre = freezed,
   }) {
     return _then(_value.copyWith(
       movies: movies == freezed
@@ -90,6 +93,10 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as Map<String, AppUser>,
+      genre: genre == freezed
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -116,7 +123,8 @@ abstract class _$$AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
       AppUser? user,
       List<Comment> comments,
       int? selectedMovieId,
-      Map<String, AppUser> users});
+      Map<String, AppUser> users,
+      String genre});
 
   @override
   $AppUserCopyWith<$Res>? get user;
@@ -139,6 +147,7 @@ class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> imple
     Object? comments = freezed,
     Object? selectedMovieId = freezed,
     Object? users = freezed,
+    Object? genre = freezed,
   }) {
     return _then(_$AppState$(
       movies: movies == freezed
@@ -169,6 +178,10 @@ class __$$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> imple
           ? _value._users
           : users // ignore: cast_nullable_to_non_nullable
               as Map<String, AppUser>,
+      genre: genre == freezed
+          ? _value.genre
+          : genre // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -183,7 +196,8 @@ class _$AppState$ implements AppState$ {
       this.user,
       final List<Comment> comments = const <Comment>[],
       this.selectedMovieId,
-      final Map<String, AppUser> users = const <String, AppUser>{}})
+      final Map<String, AppUser> users = const <String, AppUser>{},
+      this.genre = ''})
       : _movies = movies,
         _comments = comments,
         _users = users;
@@ -223,8 +237,12 @@ class _$AppState$ implements AppState$ {
   }
 
   @override
+  @JsonKey()
+  final String genre;
+
+  @override
   String toString() {
-    return 'AppState(movies: $movies, isLoading: $isLoading, pageNumber: $pageNumber, user: $user, comments: $comments, selectedMovieId: $selectedMovieId, users: $users)';
+    return 'AppState(movies: $movies, isLoading: $isLoading, pageNumber: $pageNumber, user: $user, comments: $comments, selectedMovieId: $selectedMovieId, users: $users, genre: $genre)';
   }
 
   @override
@@ -238,7 +256,8 @@ class _$AppState$ implements AppState$ {
             const DeepCollectionEquality().equals(other.user, user) &&
             const DeepCollectionEquality().equals(other._comments, _comments) &&
             const DeepCollectionEquality().equals(other.selectedMovieId, selectedMovieId) &&
-            const DeepCollectionEquality().equals(other._users, _users));
+            const DeepCollectionEquality().equals(other._users, _users) &&
+            const DeepCollectionEquality().equals(other.genre, genre));
   }
 
   @override
@@ -250,7 +269,8 @@ class _$AppState$ implements AppState$ {
       const DeepCollectionEquality().hash(user),
       const DeepCollectionEquality().hash(_comments),
       const DeepCollectionEquality().hash(selectedMovieId),
-      const DeepCollectionEquality().hash(_users));
+      const DeepCollectionEquality().hash(_users),
+      const DeepCollectionEquality().hash(genre));
 
   @JsonKey(ignore: true)
   @override
@@ -265,7 +285,8 @@ abstract class AppState$ implements AppState {
       final AppUser? user,
       final List<Comment> comments,
       final int? selectedMovieId,
-      final Map<String, AppUser> users}) = _$AppState$;
+      final Map<String, AppUser> users,
+      final String genre}) = _$AppState$;
 
   @override
   List<Movie> get movies => throw _privateConstructorUsedError;
@@ -281,6 +302,8 @@ abstract class AppState$ implements AppState {
   int? get selectedMovieId => throw _privateConstructorUsedError;
   @override
   Map<String, AppUser> get users => throw _privateConstructorUsedError;
+  @override
+  String get genre => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$AppState$CopyWith<_$AppState$> get copyWith => throw _privateConstructorUsedError;

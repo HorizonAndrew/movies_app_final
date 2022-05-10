@@ -16,11 +16,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final ScrollController _controller = ScrollController();
+  String genre = '';
 
   @override
   void initState() {
     super.initState();
-    StoreProvider.of<AppState>(context, listen: false).dispatch(GetMovies(_onResult));
+    StoreProvider.of<AppState>(context, listen: false).dispatch(GetMovies(_onResult, genre));
     _controller.addListener(_onScroll);
   }
 
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
 
     if (offset >= extent - (MediaQuery.of(context).size.height * 2) && !store.state.isLoading) {
       // if (offset >= extent - 300 && !store.state.isLoading) {
-      StoreProvider.of<AppState>(context).dispatch(GetMovies(_onResult));
+      StoreProvider.of<AppState>(context).dispatch(GetMovies(_onResult, genre));
     }
   }
 
@@ -63,6 +64,14 @@ class _HomePageState extends State<HomePage> {
               },
               icon: const Icon(Icons.power_settings_new),
             ),
+            actions: <Widget>[
+              IconButton(
+                onPressed: () {
+                  genre = 'Comedy';
+                },
+                icon: const Icon(Icons.more_vert),
+              ),
+            ],
           ),
           body: MoviesContainer(
             builder: (BuildContext context, List<Movie> movies) {
