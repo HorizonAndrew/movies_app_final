@@ -9,6 +9,6 @@ class AppState with _$AppState {
     AppUser? user,
     @Default(<Comment>[]) List<Comment> comments,
     int? selectedMovieId,
-    @Default(<String, AppUser>{})Map<String /*uid*/, AppUser> users,
+    @Default(<String, AppUser>{}) Map<String /*uid*/, AppUser> users,
   }) = AppState$;
 }
